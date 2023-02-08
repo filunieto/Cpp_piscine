@@ -6,10 +6,11 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 19:49:55 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/08 12:35:15 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:16:48 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 
 void	print_welcome(void)
 {
