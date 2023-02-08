@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "../include/Prompt.hpp"
 
 void	print_welcome(void)
 {
