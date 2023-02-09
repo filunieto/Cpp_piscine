@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:59:56 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/08 12:23:52 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:58:48 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	Contact();
 	~Contact();
 private:
-
+	std::string _firstName;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:10:03 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/08 13:18:15 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:06:50 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 
 int	main()
 {
-	PhoneBook	PhoneBook;
+	PhoneBook	agenda;
+	Contact		Contact1;
 	std::string	input;
 
 	print_welcome();
@@ -31,6 +32,7 @@ int	main()
 		if (input == "ADD")
 		{
 			std::cout <<  "Add contact" << std::endl;
+			agenda.addContact();
 		}
 		else if (input == "SEARCH")
 		{

@@ -6,6 +6,13 @@ NAME = phonebook
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
+RESET = \033[0m
+GREEN_G = \033[1;32m
+GREEN_F = \033[1;0m\033[32m
+RED_G = \033[1;31m
+RED_F = \033[1;0m\033[31m
+
+
 # S = src/ 
 # O = obj/
 I = include/
@@ -27,22 +34,27 @@ OBJ = $(addprefix obj/,$(notdir $(SRC:%.cpp=%.o)))
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	@echo "$(GREEN_G)$(NAME)$(GREEN_F) linking...$(RESET)"
+	@$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	@echo "$(GREEN_G)$(NAME)$(GREEN_F) created.$(RESET)"
 
 obj/%.o : %.cpp | obj
-	$(CXX) -c $(CPPFLAGS) $< -I $(I) -o $@
+	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling...$(RESET)"
+	@$(CXX) -c $(CPPFLAGS) $< -I $(I) -o $@
 
 # $O%.o : %.cpp | obj
 # 	$(CXX) -c $(CPPFLAGS) -I $(I) $< -o $@
 
 obj :
-	mkdir obj
+	@mkdir obj
 
 clean :
-	rm -drf obj
+	@rm -drf obj
+	@echo "$(RED_G)Objects files $(OBJ) $(RED_F) removed!$(RESET)"
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(RED_G)$(NAME)$(RED_F) also removed!$(RESET)"
 
 re : fclean all
 
