@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 19:49:55 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/08 13:16:48 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:24:08 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	print_welcome(void)
 
 void	print_promt(void)
 {
+	//printAgenda();
 	std::cout << "What do you want to do?" << std::endl;
 	std::cout << "ADD save a new contact" << std::endl;
 	std::cout << "SEARCH display your contacts" << std::endl;

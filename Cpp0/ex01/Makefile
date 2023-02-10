@@ -40,7 +40,9 @@ $(NAME) : $(OBJ)
 
 obj/%.o : %.cpp | obj
 	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling...$(RESET)"
-	@$(CXX) -c $(CPPFLAGS) $< -I $(I) -o $@
+	@$(CXX) -c $(CPPFLAGS) $<  -o $@
+
+# @$(CXX) -c $(CPPFLAGS) $< -I $(I) -o $@
 
 # $O%.o : %.cpp | obj
 # 	$(CXX) -c $(CPPFLAGS) -I $(I) $< -o $@

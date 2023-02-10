@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:10:03 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/09 12:06:50 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:13:50 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main()
 	while ( true )
 	{
 		print_promt();
+
 		std::getline(std::cin, input);
 		if (input == "ADD")
 		{
@@ -42,6 +43,11 @@ int	main()
 		{
 			std::cout <<  "Salimos" << std::endl;
 			return (0);
+		}
+		if (std::cin.eof() == true)
+		{
+			std::cout << "Exiting.. " << std::endl;
+			std::exit(0);
 		}
 	}
 	return (0);	

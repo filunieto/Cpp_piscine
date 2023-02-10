@@ -6,12 +6,12 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:00:10 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/09 13:20:26 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:25:39 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-//#include "Contact.hpp"
+#include "Contact.hpp"
 #ifndef PHONEBOOK_CPP
 #define PHONEBOOK_CPP
 
@@ -29,7 +29,7 @@ private:
 	size_t	_nbContacts;
 	bool	_full;
 	size_t	_index;
-	//Contact	_arrayContacts[8];
+	Contact	_arrayContacts[8];
 };
 
 
