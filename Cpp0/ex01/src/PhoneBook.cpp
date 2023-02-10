@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:01:33 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 13:56:57 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:04:10 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ void PhoneBook::addContact(void)
 	if (this->_full == true)
 	{
 		std::cout <<  "la agenda está a full . Borra contacvtos!" << std::endl;
-		return ;
+		this->_index = MAX_CONTC - 1;
 	}
-	while (field.empty())
+	while (field.empty()) //introducing firstName
 	{
 		std::cout << "\nPlease introduce contact's firts name: ";
+		std::cout << "for contact number " << this->_index << std::endl ;
 		std::getline(std::cin, field);
 		if (std::cin.eof() == true)
 		{
@@ -48,16 +49,31 @@ void PhoneBook::addContact(void)
 		}
 	}
 	this->_arrayContacts[this->_index].setFirstName(field);
+	field.clear();
+	while (field.empty()) //introducing firstName
+	{
+		std::cout << "Please introduce contact's LAST name: ";
+		std::getline(std::cin, field);
+		if (std::cin.eof() == true)
+		{
+			std::cout << "Exiting.. " << std::endl;
+			std::exit(0);
+		}
+	}
+	this->_arrayContacts[this->_index].setLastName(field);
+	field.clear();
+	std::cout <<  "New contact added!" << std::endl;
 	if (this->_full == false)
 	{
 		this->_nbContacts = this->_nbContacts + 1;
 		this->_index += 1;
 	}
-	if (this->_nbContacts == 8)
+	if (this->_nbContacts == MAX_CONTC)
+	{
 		this->_full = true;
+	}
 	printAgenda();
 	//std::cout << "\nHERE contact's firts name in agenda: " << this->_arrayContacts[this->_index] << std::endl;
-	field.clear();
 }
 
 PhoneBook::~PhoneBook()
@@ -73,10 +89,10 @@ void	PhoneBook::printAgenda()
 		std::cout <<  "your agenda is empty. Go and find some friends!" << std::endl;
 		return ;
 	}
-
 	for (int i = 0; i < (int)this->_nbContacts; i++)
 	{
 		std::cout <<  "contacto " << i << std::endl;
-		std::cout <<  "nombre: " << _arrayContacts[i].getFirstName() << std::endl;
+		std::cout <<  "First name: " << _arrayContacts[i].getFirstName() << std::endl;
+		std::cout <<  "Last name: " << _arrayContacts[i].getLastName() << std::endl;
 	}
 }

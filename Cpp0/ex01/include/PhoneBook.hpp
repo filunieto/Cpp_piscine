@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:00:10 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 11:25:39 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 21:42:46 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "Contact.hpp"
 #ifndef PHONEBOOK_CPP
 #define PHONEBOOK_CPP
+
+#define MAX_CONTC 3
 
 class PhoneBook {
 	
@@ -29,7 +31,7 @@ private:
 	size_t	_nbContacts;
 	bool	_full;
 	size_t	_index;
-	Contact	_arrayContacts[8];
+	Contact	_arrayContacts[MAX_CONTC];
 };
 
 

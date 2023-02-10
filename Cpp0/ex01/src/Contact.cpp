@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:01:28 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 13:36:27 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/10 21:54:11 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ void	Contact::setFirstName(std::string firstName)
 std::string Contact::getFirstName(void)
 {
 	return (this->_firstName);
+}
+
+void	Contact::setLastName(std::string LastName)
+{
+	this->_LastName = LastName;
+}
+
+std::string Contact::getLastName(void)
+{
+	return (this->_LastName);
 }
