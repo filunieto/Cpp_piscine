@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:10:03 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 12:13:50 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/11 14:52:28 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	main()
 		else if (input == "SEARCH")
 		{
 			std::cout <<  "SEARCH contact" << std::endl;
+			agenda.searchContact();
 		}
 		else if (input == "EXIT")
 		{

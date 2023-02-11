@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:00:10 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 21:42:46 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/11 23:16:13 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ public:
 	~PhoneBook();
 
 	void addContact(void);
+	void searchContact(void);
 	void printAgenda(void);
-	void printContact(size_t index);
+	void printContactAgend(size_t index);
 	
 private:
-	size_t	_nbContacts;
+	size_t	_numbContacts;
 	bool	_full;
 	size_t	_index;
 	Contact	_arrayContacts[MAX_CONTC];
