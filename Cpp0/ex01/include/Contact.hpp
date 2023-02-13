@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:59:56 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/10 21:54:31 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/13 11:51:35 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,22 @@ public:
 	// 		std::string _phoneNumber, std::string _darkestSecret);
 	void			setFirstName(std::string firstName);
 	std::string		getFirstName();
+	std::string 	getshortFirstName(void);
 
 	void			setLastName(std::string LastName);
 	std::string		getLastName();
+	std::string 	getshortLastName(void);
+
+
+	void			setnickName(std::string nickName);
+	std::string		getnickName();
+	std::string 	getshortnickName(void);
+
+	void			setphoneNumber(std::string phoneNumber);
+	std::string		getphoneNumber();
+
+	void			setdarkestSecret(std::string darkestSecret);
+	std::string		getdarkestSecret();
 	
 private:
 	std::string _firstName;

@@ -9,6 +9,8 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 RESET = \033[0m
 GREEN_G = \033[1;32m
 GREEN_F = \033[1;0m\033[32m
+MAGEN_G = \033[1;36m
+MAGEN__F = \033[1;0m\033[36m
 RED_G = \033[1;31m
 RED_F = \033[1;0m\033[31m
 
@@ -34,12 +36,12 @@ OBJ = $(addprefix obj/,$(notdir $(SRC:%.cpp=%.o)))
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	@echo "$(GREEN_G)$(NAME)$(GREEN_F) linking...$(RESET)"
+	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) 🤼 linking...$(RESET)"
 	@$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN_G)$(NAME)$(GREEN_F) created.$(RESET)"
+	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) created.🤸‍♂$(RESET)"
 
 obj/%.o : %.cpp | obj
-	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling...$(RESET)"
+	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling 🧘🧘🧘$(RESET)"
 	@$(CXX) -c $(CPPFLAGS) $<  -o $@
 
 # @$(CXX) -c $(CPPFLAGS) $< -I $(I) -o $@
@@ -50,6 +52,8 @@ obj/%.o : %.cpp | obj
 obj :
 	@mkdir obj
 
+run : all
+	./phonebook
 clean :
 	@rm -drf obj
 	@echo "$(RED_G)Objects files $(OBJ) $(RED_F) removed!$(RESET)"
