@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:01:28 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/13 11:59:07 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:29:22 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 Contact::Contact()
 {
-	//std::cout <<  "contact constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact()
 {
-	//std::cout <<  "contact deestructor called" << std::endl;
 	return ;
 }
 

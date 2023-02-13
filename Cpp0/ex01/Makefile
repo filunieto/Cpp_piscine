@@ -1,5 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/02/13 20:33:33 by fnieves-          #+#    #+#              #
+#    Updated: 2023/02/13 20:34:46 by fnieves-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-#Is it needed below?
+
+# do not gorget!!
 VPATH = src
 
 NAME = phonebook
@@ -27,8 +39,7 @@ I = include/
 # OBJ = $(patsubst $S%.cpp, $O%.o, $(SRC))
 
 SRC = 	main.cpp Contact.cpp PhoneBook.cpp \
-		# Prompt.cpp 
-		# añadir Prompt este archivo en el makefile después
+		Prompt.cpp 
 
 OBJ = $(addprefix obj/,$(notdir $(SRC:%.cpp=%.o)))
 
@@ -38,7 +49,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) 🤼 linking...$(RESET)"
 	@$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) created.🤸‍♂$(RESET)"
+	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) 🎖 created. $(RESET)"
 
 obj/%.o : %.cpp | obj
 	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling 🧘🧘🧘$(RESET)"
@@ -52,7 +63,7 @@ obj/%.o : %.cpp | obj
 obj :
 	@mkdir obj
 
-run : all
+run : re
 	./phonebook
 clean :
 	@rm -drf obj

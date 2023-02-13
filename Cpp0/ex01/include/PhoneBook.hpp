@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:00:10 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/13 11:52:15 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:51:04 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 #include <iostream>
 #include "Contact.hpp"
 #include "Prompt.hpp"
+#include <string>
+#include <csignal>
 
-#define MAX_CONTC 3
+#define MAX_CONTC 8
 
 class PhoneBook {
 	
