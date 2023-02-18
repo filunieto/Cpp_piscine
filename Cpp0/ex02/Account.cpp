@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:48:33 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/17 23:56:10 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/18 13:29:27 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,24 @@ void Account::makeDeposit(int deposit)
 
 bool Account::makeWithdrawal(int withdrawal)
 {
-	//comprobar si la cantidad es positiva 
-	// y aagregra y actualizar parametrosç
-	// sin no
-	// [19920104_091532] index:5;p_amount:23;withdrawal:refused
+	
+	_displayTimestamp(); //??
+	std::cout << "index:" << _accountIndex  << ";";
+	std::cout << "p_amount:" << _amount << ";";
+	if (withdrawal >= 0 && _amount >= withdrawal)
+	{
+		_nbWithdrawals += 1;
+		_amount =  _amount - withdrawal;
+		_totalAmount = _totalAmount - withdrawal;
+		_totalNbWithdrawals += 1;
+		std::cout << "withdrawal:" << withdrawal << ";";
+		std::cout << "amount:" << _amount << ";";
+		std::cout << "nb_withdrawals:" << _nbWithdrawals << ";";
+		return (true);
+	}
+	else
+		std::cout << "withdrawal:refused" << std::endl;
+	return (false);
 }
 
 
