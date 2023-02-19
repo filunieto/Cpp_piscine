@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 20:33:33 by fnieves-          #+#    #+#              #
-#    Updated: 2023/02/13 20:34:46 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/02/19 14:56:14 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) 🤼 linking...$(RESET)"
 	@$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) 🎖 created. $(RESET)"
+	@echo "$(MAGEN_G)$(NAME)$(MAGEN_F) created.❗❗ 🏆🏆🏆 $(RESET)"
 
 obj/%.o : %.cpp | obj
 	@echo "$(GREEN_G)$(NAME)$(GREEN_F) compiling 🧘🧘🧘$(RESET)"
