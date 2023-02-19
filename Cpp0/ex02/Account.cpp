@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:48:33 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/19 14:38:33 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/19 15:21:31 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,22 @@ int	Account::getNbWithdrawals( void )
 	return (_totalNbWithdrawals);
 }
 
+
+/**
+ * @brief Este código define una función llamada _displayTimestamp que imprime la marca de tiempo actual en un formato específico en la consola.
+
+La función comienza declarando una variable std::time_t t y un puntero a una estructura std::tm llamada actual_instant. Luego, llama a la función std::localtime para obtener la hora local y almacenarla en la estructura actual_instant.
+
+A continuación, se declara una matriz de caracteres llamada buffer con capacidad para almacenar hasta 120 caracteres. Luego, se llama a la función std::time con el argumento NULL para obtener la hora actual del sistema en segundos desde el Epoch, y se almacena en la variable t.
+
+Después, se llama a la función std::strftime, que toma los siguientes argumentos:
+
+    Un puntero a la matriz buffer, que es donde se almacenará la cadena de salida formateada.
+    El tamaño de la matriz buffer.
+    Una cadena de formato que especifica cómo se formateará la hora actual. En este caso, la cadena de formato es [%Y%m%d_%H%M%S], que especifica el año, mes, día, hora, minuto y segundo, todo separado por guiones bajos y entre corchetes.
+    El puntero a la estructura actual_instant, que contiene la hora local que se obtuvo anteriormente.
+ * 
+ */
 void Account::_displayTimestamp(void)
 {
 	std::time_t t;

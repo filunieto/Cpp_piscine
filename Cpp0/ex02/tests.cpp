@@ -12,6 +12,9 @@
 #include <functional>
 #include "Account.hpp"
 
+/*
+	En qué momento se llama a los constructores y como empieza todo
+*/
 
 int		main( void ) {
 
