@@ -18,13 +18,13 @@
 
 int		main( void ) {
 
-	typedef std::vector<Account::t>							  accounts_t;
-	typedef std::vector<int>								  ints_t;
-	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
+	typedef std::vector<Account::t>							  accounts_t; //declaramos un vector de cuentas
+	typedef std::vector<int>								  ints_t; //vector de enteros
+	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t; //par de iteradores para recorrer los elemensto de arriba
 
 	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
-	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
-	accounts_t				accounts( amounts, amounts + amounts_size );
+	size_t const			amounts_size( sizeof(amounts) / sizeof(int) ); //para saber el numero de elemntos arriba
+	accounts_t				accounts( amounts, amounts + amounts_size ); //así se crea el vector. (desde el princiopio amounts hasta ultimo elemento "amounts + amounts_size" )
 	accounts_t::iterator	acc_begin	= accounts.begin();
 	accounts_t::iterator	acc_end		= accounts.end();
 
@@ -40,9 +40,12 @@ int		main( void ) {
 	ints_t::iterator	wit_begin	= withdrawals.begin();
 	ints_t::iterator	wit_end		= withdrawals.end();
 
+	//lineas 9 hasta la 17 del log file
 	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) ); 
 
+	//doble iterador con dos condiciones diferentes .Buscar más infor en internet
+	//recorre un array de cuentas a la vez que el array de cantidades
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;
 		  ++(it.first), ++(it.second) ) {
@@ -63,6 +66,7 @@ int		main( void ) {
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
+	//llama al destructor
 	return 0;
 }
 
