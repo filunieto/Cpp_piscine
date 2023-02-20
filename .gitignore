@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+test
+test/**
+other github proyects/**
+other github proyects

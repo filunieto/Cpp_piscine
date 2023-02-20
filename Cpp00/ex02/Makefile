@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
+#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 20:33:33 by fnieves-          #+#    #+#              #
-#    Updated: 2023/02/19 14:58:40 by fnieves          ###   ########.fr        #
+#    Updated: 2023/02/20 13:38:56 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ obj/%.o : %.cpp | obj
 obj :
 	@mkdir obj
 
-run : re
-	./phonebook
+r : re
+	./test
 clean :
 	@rm -drf obj
 	@echo "Objects files $(RED_G) $(OBJ) $(RED_F) $(RESET)removed!"
