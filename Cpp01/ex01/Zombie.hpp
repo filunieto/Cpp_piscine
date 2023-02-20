@@ -1,19 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:36 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/20 11:17:22 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/19 20:02:03 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/19 20:57:17 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef __ZOMBIE_H__
+#define __ZOMBIE_H__
 
-void randomChump( std::string name )
+#include <iostream>
+
+
+
+
+
+class Zombie
 {
-	Zombie new_Zombie(name);
-	new_Zombie.announce();
-}
+private:
+	std::string _name;
+	/* data */
+public:
+	Zombie(/* args */);
+	~Zombie();
+	void setName(std::string name);
+};
+
+
+
+#endif 
+
+
+
+
+
+
+
+// Zombie::Zombie(/* args */)
+// {
+// }
+
+// Zombie::~Zombie()
+// {
+// }
