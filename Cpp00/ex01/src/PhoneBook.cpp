@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:01:33 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/02/13 20:44:18 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:50:25 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void PhoneBook::addContact(void)
 
 	if (this->_full == true)
 	{
-		std::cout <<  "la agenda está a full . Borra contacvtos!" << std::endl;
+		std::cout <<  "Agenda full . You may want delete contacts: next one will delete the last one!" << std::endl;
 		this->_index = MAX_CONTC - 1;
 	}
 	while (field.empty())
