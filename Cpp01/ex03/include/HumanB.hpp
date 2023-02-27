@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/25 14:25:15 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/27 14:39:33 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/27 15:39:38 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-int main(void)
+
+#ifndef __HUMAN_B_HPP__
+#define __HUMAN_B_HPP__
+#include <iostream>
+
+class HumanB
 {
-	std::string name1 = "Flipi";
-	std::string name2 = "Wiki";
+private:
+	std::string _name;
+public:
+	HumanB(/* args */);
+	~HumanB();
+};
 
-	Zombie *Zombie1;
-	
-	Zombie1 = newZombie(name1);
-	Zombie1->announce();
-	delete Zombie1;
-	/*------------------------------------------------*/
-
-	randomChump(name2);
-	//new_Zombie->announce();
-	return (0);
+HumanB::HumanB(/* args */)
+{
 }
+
+HumanB::~HumanB()
+{
+}
+
+
+#endif

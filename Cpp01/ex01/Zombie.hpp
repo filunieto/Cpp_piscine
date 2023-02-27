@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/25 14:25:15 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/20 02:59:39 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/22 16:16:54 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-int main(void)
+#ifndef __ZOMBIE_H__
+#define __ZOMBIE_H__
+
+#include <iostream>
+
+class Zombie
 {
-	std::string name1 = "Flipi";
-	std::string name2 = "Wiki";
+private:
+	std::string _name;
 
-	Zombie *Zombie1;
-	
-	Zombie1 = newZombie(name1);
-	Zombie1->announce();
-	delete Zombie1;
-	/*------------------------------------------------*/
+public:
+	Zombie();
+	~Zombie();
+	void announce( void ) const;
+	void setName (std::string name);
+};
 
-	randomChump(name2);
-	//new_Zombie->announce();
-	return (0);
-}
+// Zombie* newZombie( std::string name );
+// void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
+#endif 

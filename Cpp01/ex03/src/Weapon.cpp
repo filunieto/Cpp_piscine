@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/25 14:25:15 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/27 13:38:14 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/27 14:35:05 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+void	setType (std::string typeWeapon const)
 {
-	std::string name1 = "Flipi";
-	std::string name2 = "Wiki";
+	this->_type = typeWeapon;
+}
 
-	Zombie *Zombie1;
-	
-	Zombie1 = newZombie(name1);
-	Zombie1->announce();
-	delete Zombie1;
-	/*------------------------------------------------*/
+std::string const & getType(void)
+{
+	return ((std::string const) this->_type);
+}
 
-	randomChump(name2);
-	//new_Zombie->announce();
-	return (0);
+Weapon::Weapon()
+{
+}
+
+Weapon::~Weapon()
+{
 }
