@@ -5,18 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 20:40:57 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/19 21:01:07 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/20 11:33:43 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+int main(void)
 {
-	int N = 5;
-	std::string name = "Felipe";
-	Zombie::zombieHorde(N, name);
+	std::string name1 = "Flipi";
+	std::string name2 = "Wiki";
+
+	Zombie *Zombie1;
 	
+	Zombie1 = newZombie(name1);
+	Zombie1->announce();
+	delete Zombie1;
+	/*------------------------------------------------*/
+
+	randomChump(name2);
+	//new_Zombie->announce();
+
 	return (0);
 }

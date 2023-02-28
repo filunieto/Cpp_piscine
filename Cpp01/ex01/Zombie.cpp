@@ -5,38 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 20:01:45 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/19 20:58:40 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/20 02:59:48 by fnieves           #+#    #+#             */
+/*   Updated: 2023/02/20 11:16:30 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+// void Zombie::setName(std::string name)
+// {
+// 	this->_name = name;
+// }
+
+void Zombie::announce(void)
 {
-	
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+
+Zombie::Zombie(std::string name)
+{
+	this->_name = name;
+	std::cout << this->_name << ": was created " << std::endl;
+
 }
 
 Zombie::~Zombie()
 {
-	
-}
+	std::cout << this->_name << ": was destroyed " << std::endl;
 
-void Zombie::setName(std::string name){
-	
-	this->_name = name;
-}
-
-Zombie* zombieHorde( int N, std::string name )
-{
-	//Zombie* Horde1;
-	Zombie Horde[N];
-	
-	//Horde1 = (Zombie* )malloc(sizeof(Zombie) * N);
-
-	for (int i = 0; i < N; i++)
-	{
-		Horde[i].setName(name);
-	}
-	return (Horde);
 }

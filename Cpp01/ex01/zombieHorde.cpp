@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:36 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/20 11:17:22 by fnieves          ###   ########.fr       */
+/*   Created: 2023/02/21 12:48:37 by fnieves-          #+#    #+#             */
+/*   Updated: 2023/02/21 19:12:12 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void randomChump( std::string name )
+Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie new_Zombie(name);
-	new_Zombie.announce();
+	
 }
