@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:43 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/27 15:40:26 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:45:28 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,17 @@ class HumanA  //como parametro , tendría una class weapon? o un string
 {
 private:
 	std::string _name;
-	Weapon(); // a qué funcion se llama para tener una weapon, al constructor?
+	Weapon& _weapon; // a qué funcion se llama para tener una weapon, al constructor?
+	// >>> por qué no ? Weapon weapon;
 	// Weapon::setType (std::string typeWeapon)
 	
 public:
 	HumanA(/* args */);
 	~HumanA();
-	void attack(void); //si le he dado una clase como input
+	void attack(void) const; //si le he dado una clase como input
 };
 
-HumanA::HumanA(/* args */)
-{
-}
 
-HumanA::~HumanA()
-{
-}
 
 
 #endif

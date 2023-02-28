@@ -6,23 +6,30 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 13:38:14 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/27 14:35:05 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:43:38 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-void	setType (std::string typeWeapon const)
+void	Weapon::setType (std::string typeWeapon const)
 {
 	this->_type = typeWeapon;
+	std::cout << "weapon set to: " << this->_type << std::endl;
 }
 
-std::string const & getType(void)
+// void	Weapon::setType (std::string typeWeapon const) ¿podríamos?
+// {
+// 	this->_type = typeWeapon;
+// }
+
+std::string const & Weapon::getType(void) const //por qué const?
 {
-	return ((std::string const) this->_type);
+	return (this->_type);
+	// o return (_type);
 }
 
-Weapon::Weapon()
+Weapon::Weapon(std::string typeWeapon) : _type(typeWeapon)
 {
 }
 
