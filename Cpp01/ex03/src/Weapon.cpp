@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 13:38:14 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 14:43:38 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 20:18:00 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "../include/Weapon.hpp"
 
 void	Weapon::setType (std::string typeWeapon const)
 {

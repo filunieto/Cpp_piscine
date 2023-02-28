@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:33 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 14:56:58 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 20:17:31 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#include "../include/HumanB.hpp"
 
 void	HumanB::attack() const
 {

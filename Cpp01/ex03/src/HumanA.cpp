@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:43 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 14:45:17 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 20:17:03 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
 #include <iostream>
-#include "HumanA.hpp"
+#include "../include/HumanA.hpp"
 
 
 void attack() const
