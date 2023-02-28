@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:43 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 14:45:28 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/02/28 21:27:44 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ private:
 	// Weapon::setType (std::string typeWeapon)
 	
 public:
-	HumanA(/* args */);
+	HumanA(std::string name, Weapon &weapon);
 	~HumanA();
-	void attack(void) const; //si le he dado una clase como input
+	void attack(void) const; //si le he dado una clase como input. Porqué no puedo usar this?
 };
 
 
