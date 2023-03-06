@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 15:53:14 by fnieves-          #+#    #+#              #
-#    Updated: 2023/03/01 18:30:01 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/03/06 13:01:18 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = Sed
 VPATH = src
 
 CXX = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+# CFLAGS = -Wall -Wextra -Werror -std=c++98 paraMac cambiar
+CFLAGS =  
 
 SRC = main.cpp
 
@@ -47,9 +48,13 @@ fclean : clean
 
 re : fclean all
 
+delete :
+	$(RM) prueba.replace
 
 run : re
-	./$(NAME) && cat test.out
+	./$(NAME) prueba 123 456
+
+test : delete run
 
 .PHONY : all clean fclean re
 
