@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 13:52:40 by fnieves           #+#    #+#             */
-/*   Updated: 2023/03/06 14:00:46 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/03/07 13:24:53 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef __HARL_HPP__
+#define __HARL_HPP__
+
 #include <iostream>
+#include <string>
 
 class Harl
 {
@@ -25,10 +29,4 @@ public:
 	void complain( std::string level );
 };
 
-Harl::Harl(/* args */)
-{
-}
-
-Harl::~Harl()
-{
-}
+#endif
