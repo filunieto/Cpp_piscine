@@ -6,7 +6,7 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/28 19:47:53 by fnieves-          #+#    #+#              #
-#    Updated: 2023/03/01 18:23:51 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/03/07 13:35:33 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)  
-# $(CXX) $(CXXFLAGS) $< -o $@
+
 
 
 $(ODIR)/%.o : %.cpp  | $(ODIR) 
@@ -46,7 +46,6 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
-
 
 run : re
 	./$(NAME)
