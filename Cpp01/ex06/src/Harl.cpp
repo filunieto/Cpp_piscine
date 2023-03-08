@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 13:52:37 by fnieves           #+#    #+#             */
-/*   Updated: 2023/03/08 11:02:39 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:20:33 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	Harl::complain(std::string level)
 		}
 		i++;
 	}
-	std::cout << "\033[7;38m There was an error \033[0m "<<std::endl;
+	std::cout << "\033[7;38m There was an error with yhe input. Try again \033[0m "<<std::endl;
 }
 
 
@@ -98,4 +98,44 @@ Harl::Harl()
 Harl::~Harl()
 {
 	std::cout << "Class Harl destroyed"<<std::endl;	
+}
+
+int levelComplain(std::string input)
+{
+	std::string complains[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int i = 0;
+	while (i < 4)
+	{
+		if (!complains[i].compare(input))
+		{
+			
+			return (i);
+		}
+		i++;
+	}
+	return (4);
+}
+
+void	expressComplain(int complainLevel)
+{
+	Harl harl;
+	
+	switch (complainLevel)
+	{
+	case 0:
+		harl.complain("DEBUG");
+		break;
+	case 1:
+		harl.complain("INFO");
+		break;
+	case 2:
+		harl.complain("WARNING");
+		break;
+	case 3:
+		harl.complain("ERROR");
+		break;
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		break;
+	}
 }

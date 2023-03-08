@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
+#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/20 02:42:24 by fnieves           #+#    #+#              #
-#    Updated: 2023/02/22 12:28:05 by fnieves          ###   ########.fr        #
+#    Updated: 2023/03/08 12:08:00 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,13 +45,14 @@ clean :
 
 fclean : clean
 	rm $(NAME)
+	
 
 re : fclean all
 
 .PHONY : all clean fclean
 
-r : re
+run : all
 	./$(NAME)
 
-val : re
+valgrind : re
 	valgrind --leak-check=yes -s ./$(NAME) 

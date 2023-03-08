@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:33 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 21:52:49 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:52:20 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class HumanB
 {
 private:
 	std::string _name;
-	// Weapon	_weaponType;
 	Weapon* _weapon;
 	
 public:

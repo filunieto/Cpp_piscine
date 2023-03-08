@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 02:59:39 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/20 11:16:23 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:14:35 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ private:
 public:
 	Zombie(std::string name);
 	~Zombie();
-	//void setName(std::string name);
 	void announce( void );
 };
 

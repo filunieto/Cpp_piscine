@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 13:52:40 by fnieves           #+#    #+#             */
-/*   Updated: 2023/03/07 13:24:53 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:16:36 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ public:
 	~Harl();
 	void complain( std::string level );
 };
+
+void	expressComplain(int complainLevel);
+int		levelComplain(std::string input);
 
 #endif

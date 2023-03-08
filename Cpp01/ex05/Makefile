@@ -6,7 +6,7 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 13:52:51 by fnieves           #+#    #+#              #
-#    Updated: 2023/03/07 13:34:47 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/03/08 19:25:38 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ SRC = 	main.cpp Harl.cpp
 
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
-
 RM = rm -rfd
 
 ODIR = obj
@@ -42,8 +41,7 @@ fclean : clean
 
 re : fclean all
 
-
-run : re
+run : all
 	./$(NAME)
 
 .PHONY : all clean fclean re

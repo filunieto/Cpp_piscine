@@ -6,7 +6,7 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 15:53:14 by fnieves-          #+#    #+#              #
-#    Updated: 2023/03/07 12:46:53 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/03/08 17:44:48 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ VPATH = src
 
 CXX = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-# CFLAGS =  
+
 
 SRC = main.cpp
 
@@ -43,15 +43,17 @@ $(ODIR) :
 clean : 
 	$(RM) $(ODIR) test.out
 
-fclean : clean
+delete :
+	$(RM) prueba.replace
+
+fclean : clean delete
 	$(RM) $(NAME)
 
 re : fclean all
 
-delete :
-	$(RM) prueba.replace
 
-run : re
+
+run : all
 	./$(NAME) prueba 123 456
 
 test : delete run

@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:39:43 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 21:27:44 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:37:46 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,17 @@
 
 
 
-class HumanA  //como parametro , tendría una class weapon? o un string
+class HumanA 
 {
 private:
 	std::string _name;
-	Weapon& _weapon; // a qué funcion se llama para tener una weapon, al constructor?
-	// >>> por qué no ? Weapon weapon;
-	// Weapon::setType (std::string typeWeapon)
+	Weapon& _weapon; 
+
 	
 public:
 	HumanA(std::string name, Weapon &weapon);
 	~HumanA();
-	void attack(void) const; //si le he dado una clase como input. Porqué no puedo usar this?
+	void attack(void) const;
 };
 
 

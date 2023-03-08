@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
+#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 11:37:34 by fnieves           #+#    #+#              #
-#    Updated: 2023/02/27 12:12:06 by fnieves          ###   ########.fr        #
+#    Updated: 2023/03/08 12:38:39 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ CFLAGS = -Wextra -Werror -Wall -std=c++98
 NAME = program
 
 SRC = main.cpp
-# OBJ = $(patsubst %.c, %.o, $(SRC))
-# OBJ =  $(addprefix obj/, $(notdir$(SRC:%.cpp=%.o))) 
-OBJ = $(SRC:%.cpp=%.o)
+ODIR = obj
+OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
+
 
 
 all : $(NAME)
@@ -31,14 +31,14 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	
-# obj/%.o : %.cpp | obj
-# 	$(CXX) $(CFLAGS) -c $< -o $@
+obj/%.o : %.cpp | obj
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 obj :
 	mkdir obj
 
 clean :
-	rm -drf $(OBJ)
+	rm -drf $(ODIR)
 	
 fclean : clean
 	rm -f $(NAME)

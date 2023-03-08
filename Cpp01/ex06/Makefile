@@ -6,7 +6,7 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 13:52:51 by fnieves           #+#    #+#              #
-#    Updated: 2023/03/08 11:16:29 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/03/08 19:29:22 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o  $@
+	@echo "$(GREEN_G)$(NAME) compiled! $(GREEN_F)$(RESET) "
 
 obj/%.o : %.cpp | obj
 	$(CC) $(CFLAGS) -c $<  -o $@
@@ -55,29 +56,31 @@ re : fclean all
 .PHONY : all clean fclean re
 
 test1: all
-	@echo "$(MAGEN_G)test 1 with DEBUG as input $(MAGEN_F) 🤼$(RESET) "
+	@echo "$(MAGEN_G)📝 test 1 with DEBUG as input $(MAGEN_F) $(RESET) "
 	./$(NAME) DEBUG
 
 test2: all
-	@echo "$(MAGEN_G)test 2 with INFO as input$(MAGEN_F) 🤼$(RESET)"
+	@echo "$(MAGEN_G)📝 test 2 with INFO as input$(MAGEN_F) $(RESET)"
 	./$(NAME) INFO
 
 test3: all
-	@echo "$(MAGEN_G)test 3 with WARNING as input$(MAGEN_F) 🤼$(RESET)"
+	@echo "$(MAGEN_G)📝test 3 with WARNING as input$(MAGEN_F) $(RESET)"
 	./$(NAME) WARNING
 
 test4: all
-	@echo "$(MAGEN_G)test 4 with ERROR as input$(MAGEN_F) 🤼$(RESET)"
+	@echo "$(MAGEN_G)📝 test 4 with ERROR as input$(MAGEN_F) $(RESET)"
 	./$(NAME) ERROR
 	
 test5 : all
-	@echo "$(MAGEN_G)test 5 with no input $(MAGEN_F) 🤼$(RESET)"
+	@echo "$(MAGEN_G)📝 test 5 with no input $(MAGEN_F) $(RESET)"
 	./$(NAME)
-	@echo "$(MAGEN_G)...  or more than 1 input$(MAGEN_F) 🤼$(RESET)"
-	./$(NAME) WARNING ERROR
+	@echo "$(MAGEN_G)...  or more than 1 input$(MAGEN_F) $(RESET)"
+	    ./$(NAME) WARNING ERROR
+	@echo "$(MAGEN_G)...       and unknown input$(MAGEN_F) $(RESET)"
+	    ./$(NAME) Carmele
 
 test6: all
-	@echo "$(MAGEN_G)test 6 with empty string as input$(MAGEN_F) 🤼$(RESET)"
+	@echo "$(MAGEN_G) 📝 test 6 with empty string as input$(MAGEN_F) $(RESET)"
 	./$(NAME) ""
 
 alltest : test1 test2 test3 test4 test5 test6

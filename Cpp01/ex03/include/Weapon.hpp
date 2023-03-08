@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:02:46 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/28 22:53:38 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:49:35 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ private:
 public:
 	Weapon(std::string typeWeapon); 
 	~Weapon();
-	void setType (std::string const &  typeWeapon); //por qué no (std::string typeWeapon). Lo dice en main (qué ventajas tine esto?)
-	std::string const & getType() const; //aquí me dan const al final. Por qué?
-};
+	void setType (std::string const &  typeWeapon);
 
+	std::string const & getType() const;
+};
 
 #endif /* __WEAPON_HPP__ */

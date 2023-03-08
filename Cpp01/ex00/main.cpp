@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/25 14:25:15 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:14:21 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+void	leaks_func(void)
+{
+	system("leaks zombie");
+}
 
 int main(void)
 {
@@ -23,8 +28,9 @@ int main(void)
 	Zombie1->announce();
 	delete Zombie1;
 	/*------------------------------------------------*/
-
+	
 	randomChump(name2);
-	//new_Zombie->announce();
+	/*------------------------------------------------*/
+	//atexit(leaks_func);
 	return (0);
 }

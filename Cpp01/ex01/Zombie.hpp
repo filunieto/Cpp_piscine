@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 02:59:39 by fnieves           #+#    #+#             */
-/*   Updated: 2023/02/22 16:16:54 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/03/08 12:31:02 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ public:
 	void setName (std::string name);
 };
 
-// Zombie* newZombie( std::string name );
-// void randomChump( std::string name );
+
 Zombie* zombieHorde( int N, std::string name );
 #endif 
