@@ -6,7 +6,7 @@
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/07 11:34:28 by fnieves           #+#    #+#              #
-#    Updated: 2023/04/07 13:11:06 by fnieves          ###   ########.fr        #
+#    Updated: 2023/04/07 20:08:48 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,5 +43,5 @@ re : fclean all
 
 .PHONY : re clean fclean all
 
-run : all
+run : re
 	./$(NAME)
