@@ -6,16 +6,17 @@
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/07 11:34:28 by fnieves           #+#    #+#              #
-#    Updated: 2023/04/07 22:00:09 by fnieves          ###   ########.fr        #
+#    Updated: 2023/04/09 17:16:53 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
-NAME = fixed
+NAME = fixedP
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp Fixed.cpp Point.cpp
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
+INCLUDE = -I include
 
 RM = rm -rfd
 
@@ -28,7 +29,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
 
 obj/%.o : %.cpp | obj
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 obj :
 	mkdir obj

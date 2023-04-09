@@ -6,11 +6,11 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 12:03:38 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/09 00:31:57 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/09 17:21:59 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../include/Headers.hpp"
 
 Fixed::Fixed() : _pointInt (0)
 {
@@ -33,6 +33,10 @@ Fixed::Fixed(Fixed const &copy)
 {
 	std::cout << "Copy constructor  called " << std::endl;
 	*this = copy;
+	/* Also possible
+		this->_pointInt = copy.getRawBits();
+		_pointInt = copy.getRawBits();
+	*/
 	return ;
 }
 
@@ -66,8 +70,7 @@ Fixed& Fixed::operator=(Fixed const &copy)
 }
 /**
  * @brief Construct a new Fixed:: Fixed object
- 	El valor de i se desplaza hacia la izquierda (<<) por el número de bits de fracción _nbBits,
-	lo que significa que se mueve _nbBits bits hacia la izquierda.
+ * El valor de i se desplaza hacia la izquierda (<<) por el número de bits de fracción _nbBits, lo que significa que se mueve _nbBits bits hacia la izquierda.
 	La razón para hacer esto es que _pointInt representa un valor
 	de punto fijo que tiene _nbBits bits de fracción, lo que
 	significa que los _nbBits bits menos significativos de _pointInt
@@ -131,4 +134,143 @@ std::ostream  &operator<<(std::ostream &ost,  Fixed const &fixed)
 	std::cout << " Operator (<<) called with " << &ost << " and " << &fixed << std::endl;
 	ost << fixed.toFloat();
 	return (ost);
+}
+/*
+	Pregunta : Si hace una comparación, quién es This y quién rhs?
+	Por qué usa getRawBits?
+*/ 
+
+
+// Comparison operators
+bool Fixed::operator>(Fixed const &rhs) const
+{
+	/*
+	also valid?
+	return (this->_pointInt > rhs._pointInt);
+	*/
+	return (this->getRawBits() > rhs.getRawBits());
+}
+
+bool Fixed::operator<(Fixed const &rhs) const
+{
+	return (this->getRawBits() < rhs.getRawBits());
+}
+
+bool Fixed::operator>=(Fixed const &rhs) const
+{
+	return (this->getRawBits() >= rhs.getRawBits());
+}
+
+bool Fixed::operator<=(Fixed const &rhs) const
+{
+	return (this->getRawBits() <= rhs.getRawBits());
+}
+
+bool Fixed::operator==(Fixed const &rhs) const
+{
+	return (this->getRawBits() == rhs.getRawBits());
+}
+
+bool Fixed::operator!=(Fixed const &rhs) const
+{
+	return (this->getRawBits() != rhs.getRawBits());
+}
+
+// Arithmetic operators
+
+Fixed  Fixed::operator+(Fixed const &rhs) const
+{
+	return ((Fixed)(this->getRawBits() + rhs.getRawBits()));
+	/*
+	we could also
+		Fixed res;
+		res.setRawBits(this->getRawBits() + rhs.getRawBits());
+		return (res);
+	*/
+}
+
+Fixed Fixed::operator-(Fixed const &rhs) const
+{
+	return ((Fixed)(this->getRawBits() - rhs.getRawBits()));
+}
+
+Fixed Fixed::operator*(Fixed const &rhs) const
+{
+	/*
+		float a = this->toFloat();
+		float b = rhs.toFloat();
+		Fixed res(a *b);
+		return (res);
+	*/
+	return ((Fixed) (this->toFloat() * rhs.toFloat()));
+}
+
+Fixed Fixed::operator/(Fixed const &rhs) const
+{
+	return ((Fixed) (this->toFloat() / rhs.toFloat()));
+}
+
+// Preincrement, postincrement, predecrement and postdecrement operators
+
+Fixed & Fixed::operator++()
+{
+	this->_pointInt++;
+	return (*this);
+}
+
+Fixed & Fixed::operator--()
+{
+	this->_pointInt--;
+	return(*this);
+}
+
+Fixed Fixed::operator++(int n)
+{
+	Fixed	tmp;
+	int		raw = this->getRawBits();
+
+	tmp = *this;
+	raw = raw + n;
+	this->setRawBits(raw);
+	return (tmp);
+}
+
+Fixed Fixed::operator--(int n)
+{
+	Fixed	tmp = *this;
+	int		raw = tmp.getRawBits();
+
+	raw = raw - n;
+	tmp.setRawBits(raw);
+	return (tmp);
+	
+}
+
+// Max and min
+Fixed & Fixed::min(Fixed &a, Fixed &b)
+{
+	if (b < a)
+		return (b);
+	return (a);
+}
+
+Fixed & Fixed::max(Fixed &a, Fixed &b)
+{
+	if (b < a)
+		return (a);
+	return (b);
+}
+
+Fixed & Fixed::min(Fixed const & a, Fixed const &b)
+{
+	if (b < a)
+		return ((Fixed &)b);
+	return ((Fixed &) a);
+}
+
+Fixed & Fixed::max(Fixed const &a, Fixed const &b)
+{
+	if (b < a)
+		return ((Fixed &) a);
+	return ((Fixed &) b);
 }

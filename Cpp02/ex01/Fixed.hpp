@@ -6,12 +6,12 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 11:52:29 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/07 20:04:36 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/09 00:48:00 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-#define FIXED_H
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
