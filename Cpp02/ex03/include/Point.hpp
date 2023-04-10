@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 17:16:29 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/09 17:37:20 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/09 17:40:22 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Point
 private:
 	const Fixed _x;
 	const Fixed _y;
+	static bool _commentsON
 	
 public:
 	Point();
