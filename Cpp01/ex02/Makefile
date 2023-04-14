@@ -5,65 +5,48 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/20 02:42:24 by fnieves           #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2023/02/20 11:32:49 by fnieves          ###   ########.fr        #
-=======
-#    Updated: 2023/02/22 12:28:05 by fnieves          ###   ########.fr        #
->>>>>>> cpp02
+#    Created: 2023/02/27 11:37:34 by fnieves           #+#    #+#              #
+#    Updated: 2023/02/27 12:12:06 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
+# En make run >>> rm: cannot remove 'program': No such file or directory
+# make: *** [Makefile:36: fclean] Error 1
+VPATH = src
 
-# VPATH = src
 
-NAME = zombie
+CC = g++
+CFLAGS = -Wextra -Werror -Wall -std=c++98
+NAME = program
 
-CXX = c++
-<<<<<<< HEAD
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-=======
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -O1
-
->>>>>>> cpp02
-
-SRC = 	main.cpp	\
-		Zombie.cpp	\
-		newZombie.cpp	\
-		randomChump.cpp	\
-
+SRC = main.cpp
+# OBJ = $(patsubst %.c, %.o, $(SRC))
 # OBJ =  $(addprefix obj/, $(notdir$(SRC:%.cpp=%.o))) 
-OBJ = $(patsubst %.c, %.o, $(SRC))
+OBJ = $(SRC:%.cpp=%.o)
+
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	
+# obj/%.o : %.cpp | obj
+# 	$(CXX) $(CFLAGS) -c $< -o $@
 
-
-obj/%.o : %.cpp | obj
-	$(CXX) $(CFLAGS) -c $< -o $@
-
-obj:
+obj :
 	mkdir obj
 
 clean :
-	rm -rfd obj
-
+	rm -drf $(OBJ)
+	
 fclean : clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re : fclean all
+	
 
-.PHONY : all clean fclean
-
-r : re
-<<<<<<< HEAD
-	./zombie
-=======
+run : re
 	./$(NAME)
 
-val : re
-	valgrind --leak-check=yes -s ./$(NAME) 
->>>>>>> cpp02
+.PHONY : all clean fclean
