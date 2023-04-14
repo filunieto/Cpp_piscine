@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/14 16:33:10 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/14 16:39:48 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(std::string name) : _Name(name)
 {
-	std::cout << "Constructor default ClapTrap called" << std::endl;
+	std::cout << "Constructor default ClapTrap called whose name is " << this->_Name << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap & ClapTrap::operator=(const ClapTrap &src)
 {
-	
+	std::cout << "Operator asignation ClapTrap" << std::endl;
 }
 
 
