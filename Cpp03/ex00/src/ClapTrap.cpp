@@ -6,11 +6,11 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/14 16:39:48 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/14 19:28:03 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ClapTrap.hpp"
+#include "../  include/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name) : _Name(name)
 {
@@ -28,11 +28,52 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 	*this = copy;
 }
 
+
+
 ClapTrap & ClapTrap::operator=(const ClapTrap &src)
 {
 	std::cout << "Operator asignation ClapTrap" << std::endl;
+	this->_Name = src._Name;
+	this->_pointsHit = src._pointsHit;
+	this->_pointsEnergy = src._pointsEnergy;
+	this->_pointsAttack = src._pointsAttack;
+	return (*this);
 }
 
+void ClapTrap::attack(const std::string &target)
+{
+	if (this->_pointsEnergy >= 1)
+	{
+		std::cout << "attack ClapTrap " << this->_Name << "to " << target << std::endl;
+		this->_pointsEnergy -= 1;
+	}
+	else
+		std::cout << "No energy to attack ClapTrap " << this->_Name << " to " << target << std::endl;
+
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	std::cout << " takeDamage ClapTrap "  << this->_Name << std::endl;
+	if (this->_pointsHit > amount)
+		this->_pointsHit -= amount;
+	else
+		this->_pointsHit = 0;
+		
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	if (this->_pointsEnergy >= 1)
+	{
+		std::cout << "beRepaired ClapTrap" << this->_Name << std::endl;
+		this->_pointsEnergy -= 1;
+		this->_pointsEnergy -= 1;
+	}
+	else
+		std::cout << "No energy to beRepaired ClapTrap " << this->_Name << std::endl;
+
+}
 
 
 
