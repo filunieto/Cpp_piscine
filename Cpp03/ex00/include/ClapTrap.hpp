@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:32:25 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/15 15:19:25 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/15 17:48:41 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,21 @@ class ClapTrap
 {
 	private:
 		std::string _Name;
-		static unsigned int _pointsHit;
-		static unsigned int _pointsEnergy;
-		static unsigned int _pointsAttack;
+		unsigned int _pointsHit;
+		unsigned int _pointsEnergy;
+		unsigned int _pointsAttack;
 
 	public:
-		ClapTrap(std::string name);
+		ClapTrap();
 		~ClapTrap();
+		ClapTrap(std::string const name); //we could also (std::string const & name)
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator=(const ClapTrap &src);
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		std::string getName() const;
+		const std::string getName() const;
+		void printClass() const;
 };
 
 #endif
