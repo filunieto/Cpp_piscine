@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/14 14:54:27 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/04/15 14:49:58 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,14 @@ ODIR = obj
 #  file list without the directory names
 OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
-all = $(NAME)
+all : $(NAME)
 
 $(NAME) : $(OBJ)
 	 $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 obj/%.o : %.cpp | obj
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+# el pipe dice que lo de la derecha tiene que existir para que se ejecute
 
 obj :
 	mkdir obj
@@ -42,8 +43,8 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
-# el pipe dice que lo de la derecha tiene que existir para que se ejecute
-re : fclean | all
+
+re : fclean all
 
 run : re
 	./$(NAME)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/14 19:28:20 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/15 15:08:45 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ int main()
 	three = five;
 	
 	//*****************
-	
-	
+	five.attack(one.getName());
+	two.takeDamage(4);
+	four.beRepaired(2);
 	
 	return 0;
 }
