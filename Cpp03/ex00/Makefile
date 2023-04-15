@@ -1,0 +1,55 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
+#    Updated: 2023/04/14 14:54:27 by fnieves-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+VPATH = src
+NAME = Claptrap
+
+SRC = main.cpp ClapTrap.cpp
+CC = c++
+CFLAGS = -Wextra -Wall -Werror -std=c++98
+INCLUDE = -I include
+RM = rm -rfd
+
+ODIR = obj
+
+# $(notdir $(SRC:%.cpp=%.o)): this is the object
+#  file list without the directory names
+OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
+
+all = $(NAME)
+
+$(NAME) : $(OBJ)
+	 $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+obj/%.o : %.cpp | obj
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+
+obj :
+	mkdir obj
+
+clean :
+	$(RM) obj/
+
+fclean : clean
+	$(RM) $(NAME)
+
+# el pipe dice que lo de la derecha tiene que existir para que se ejecute
+re : fclean | all
+
+run : re
+	./$(NAME)
+
+val:
+	valgrind --leak-check=full -s ./$(NAME)
+
+leaks:
+	leaks --atExit -- ./$(NAME)
