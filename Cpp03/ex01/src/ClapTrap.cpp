@@ -6,15 +6,11 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/15 18:18:08 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/15 22:08:45 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
-
-// unsigned int ClapTrap::_pointsHit = 10;
-// unsigned int ClapTrap::_pointsEnergy = 10;
-// unsigned int ClapTrap::_pointsAttack = 0;
 
 /* ************************************************************************** */
 /* CONSTRUCTORS                                                               */
