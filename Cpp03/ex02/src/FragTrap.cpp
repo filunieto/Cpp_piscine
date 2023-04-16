@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 20:02:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/16 20:41:43 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 21:18:30 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ FragTrap & FragTrap::operator=(const FragTrap &rhs)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "Here: " << this->_Name << " ,Wasapppppp!!??: " << std::endl; ;
-
+	std::cout << "Here: " << this->_Name << " ,Wasapppppp!!??: ✋ " << std::endl; ;
+	this->_pointsEnergy--;
 }

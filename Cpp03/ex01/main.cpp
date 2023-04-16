@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/16 19:28:00 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 20:36:51 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 int main()
 {
 	//Check the constructors
+	ScavTrap DefaultClass;
+	DefaultClass.printScavTrap();
 	ScavTrap Anonimo("Anonimo");
 	Anonimo.printScavTrap();
 	ScavTrap Joe("Joe");
@@ -23,11 +25,16 @@ int main()
 	ScavTrap Jander (Joe);
 	Jander.printScavTrap();
 	ScavTrap Manu ("Manu");
-	Anonimo = Manu;
-	Anonimo.printClass();
+	
+	std::cout << "\n*****  Test for asignation:  DefaultClass = Joe;   **********"  << std::endl;
+	Joe.guardGate();
+	DefaultClass = Joe;
+	DefaultClass.printScavTrap();
+	Joe.printScavTrap();
 
 	
-	
+	std::cout << "\n*****Testing member functions**********"  << std::endl;
+
 	//*****************
 	Joe.attack(Jander.getName());
 	Joe.takeDamage(4);

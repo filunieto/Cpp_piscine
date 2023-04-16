@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/16 19:16:17 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 20:22:42 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* CONSTRUCTORS                                                               */
 /* ************************************************************************** */
 
-ClapTrap::ClapTrap() : _Name("Default ClapTrap constructed") , _pointsHit(10) , _pointsEnergy(10) , _pointsAttack(0)
+ClapTrap::ClapTrap() : _Name("Default") , _pointsHit(10) , _pointsEnergy(10) , _pointsAttack(0)
 {
 	std::cout << "Constructor default ClapTrap called whose name is " << this->_Name << std::endl;
 }

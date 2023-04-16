@@ -6,7 +6,7 @@
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/16 20:03:24 by fnieves          ###   ########.fr        #
+#    Updated: 2023/04/16 21:21:31 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +43,14 @@ clean :
 
 fclean : clean
 	$(RM) $(NAME)
+	
 
 
 re : fclean all
 
 run : re
 	./$(NAME)
+	make fclean
 
 val:
 	valgrind --leak-check=full -s ./$(NAME)

@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 19:04:51 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/16 19:27:01 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 20:36:25 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,15 @@ ScavTrap::ScavTrap(const ScavTrap &copy) :ClapTrap(copy)
 
 ScavTrap & ScavTrap::operator=(const ScavTrap &rhs)
 {
-	ClapTrap::operator=(rhs);
+	/* Below we are using the ClapTrap's overload operator= and we are
+	passing the object that we are assigning to the current object.
+	We start by assigning the value of the ClapTrap's operator to the current object.
+	This will assign the values of the variables inherited from the ClapTrap class to
+	the current object.
+	We then assign the value of the variables specific to the ScavTrap class to the current object
+	*/
+	ClapTrap::operator=(rhs); 
+	this->_guardModus = rhs._guardModus;
 	std::cout << "Overload asignation operator ScavTrap from " << this->_Name << std::endl;
 	return(*this);
 }
