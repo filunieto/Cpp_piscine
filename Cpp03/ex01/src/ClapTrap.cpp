@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/15 22:08:45 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 19:16:17 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ const std::string ClapTrap::getName() const
 void  ClapTrap::printClass() const
 {
 	std::cout <<  "\n**************\n"
-	<< "Properties from class: " << this->_Name
+	<< "Properties from class ClapTrap: " << this->_Name
 	<<  "\nEnergy: " << this->_pointsEnergy
 	<<  "\nHitPoints: " << this->_pointsHit
 	<<  "\nAtack: " << this->_pointsAttack
