@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 19:03:54 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/16 19:12:02 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 23:25:57 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 #include "ClapTrap.hpp"
 
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
+protected:
+
 private:
 	bool _guardModus;
 public:

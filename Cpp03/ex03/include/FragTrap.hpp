@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 20:02:48 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/16 20:14:48 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 23:25:44 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
+protected:
+
 private:
 	/* data */
 public:

@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 21:46:08 by fnieves           #+#    #+#             */
-/*   Updated: 2023/04/16 21:55:22 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/16 23:26:06 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ScavTrap.hpp"
 
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap :  public FragTrap, public ScavTrap
 {
 private:
 	std::string _Name;
