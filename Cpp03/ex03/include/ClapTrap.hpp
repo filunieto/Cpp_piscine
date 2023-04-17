@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:32:25 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:50:35 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/16 18:40:02 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string _Name;
 		unsigned int _pointsHit;
 		unsigned int _pointsEnergy;
@@ -32,7 +32,8 @@ class ClapTrap
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		const std::string getName() const;
+		
+		const std::string getName() const; //Only needed if we want to access from main or other external function
 		void printClass() const;
 };
 

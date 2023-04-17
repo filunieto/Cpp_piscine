@@ -3,24 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:30:42 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:52:01 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/16 20:22:42 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 
-// unsigned int ClapTrap::_pointsHit = 10;
-// unsigned int ClapTrap::_pointsEnergy = 10;
-// unsigned int ClapTrap::_pointsAttack = 0;
-
 /* ************************************************************************** */
 /* CONSTRUCTORS                                                               */
 /* ************************************************************************** */
 
-ClapTrap::ClapTrap() : _Name("Default ClapTrap constructed") , _pointsHit(10) , _pointsEnergy(10) , _pointsAttack(0)
+ClapTrap::ClapTrap() : _Name("Default") , _pointsHit(10) , _pointsEnergy(10) , _pointsAttack(0)
 {
 	std::cout << "Constructor default ClapTrap called whose name is " << this->_Name << std::endl;
 }
@@ -106,7 +102,7 @@ const std::string ClapTrap::getName() const
 void  ClapTrap::printClass() const
 {
 	std::cout <<  "\n**************\n"
-	<< "Properties from class: " << this->_Name
+	<< "Properties from class ClapTrap: " << this->_Name
 	<<  "\nEnergy: " << this->_pointsEnergy
 	<<  "\nHitPoints: " << this->_pointsHit
 	<<  "\nAtack: " << this->_pointsAttack
