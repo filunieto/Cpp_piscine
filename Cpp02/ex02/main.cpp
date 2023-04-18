@@ -5,37 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:48:44 by fnieves-         ###   ########.fr       */
+/*   Created: 2023/04/07 11:49:32 by fnieves           #+#    #+#             */
+/*   Updated: 2023/04/11 19:01:46 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ClapTrap.hpp"
-
+#include "Fixed.hpp"
 
 int main()
 {
-	//Check the constructors
-	ClapTrap Jhon ("Jhon");
-	//one.printClass();
-	ClapTrap Willy ("Willy");
-	ClapTrap Joe("Joe");
-	Joe.printClass();
-	ClapTrap Jander (Joe);
-	Jander.printClass();
-	ClapTrap Manu ("Manu");
-	Willy = Manu;
-	Willy.printClass();
+	std::cout << "*****		Fixed a		 *********" << std::endl;
+	Fixed a;
+	std::cout << "*****		Fixed const  b( 10 )	 *********" << std::endl;
+
+	Fixed const  b(Fixed(5.06f) * Fixed(42));
 
 	
-	
-	//*****************
-	Willy.attack(Jander.getName());
-	Joe.takeDamage(4);
-	Jander.beRepaired(2);
-	std::cout << "After attacking "  << std::endl;
-	Joe.printClass();
-	Willy.printClass();
-	Jander.printClass();
-	return 0;
+	// std::cout  << a << std::endl;
+	// std::cout  << ++a << std::endl;
+	// std::cout  << a << std::endl;
+	// std::cout  << a++ << std::endl;
+	// std::cout  << a << std::endl;
+
+	std::cout << "\n Fixed::max( a, b ) \n";
+	std::cout  << Fixed::max( a, b ) << std::endl;
+
+	return (0);
 }

@@ -31,18 +31,6 @@
 *.out
 *.app
 
-<<<<<<< HEAD
-test
-test/**
-other github proyects/**
-other github proyects
-**/other github proyects/**
-**/other github proyects
-
-# ultima opcion para ignorar  carpetas
-other github proyects/
-# test/
-=======
 # Valgrind logs (added by fn)
 *.rpt
 
@@ -56,4 +44,3 @@ other github proyects/
 # ultima opcion para ignorar  carpetas
 other github proyects/
 # test/
->>>>>>> cpp02
