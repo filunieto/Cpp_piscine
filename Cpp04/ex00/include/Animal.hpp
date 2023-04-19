@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:02 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/18 19:23:34 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:31:09 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class Animal
 		virtual ~Animal();
 		
 		Animal &operator=(const Animal &rhs);
-		void	printClass();
-		virtual void	makeSound();
+		void	printClass() const;
+		virtual void	makeSound() const;
 
 	private:
 		

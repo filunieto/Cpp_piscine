@@ -6,20 +6,21 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/17 13:58:59 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/17 20:51:01 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/04/19 22:02:13 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
 NAME = Polymorphism
 
-SRC = main.cpp
+SRC = 	main.cpp Animal.cpp Cat.cpp \
+		Dog.cpp WrongAnimal.cpp WrongCat.cpp
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
 
 RM = rm -rfd
 ODIR = obj
-OBJ = $(addprefix $(ODIR)/, $(notdir$(SRC:%.cpp=%.o)))
+OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
 all : $(NAME)
 
@@ -29,7 +30,7 @@ $(NAME) : $(OBJ)
 $(ODIR)/%.o : %.cpp | $(ODIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(ODIR)
+$(ODIR) :
 	mkdir $(ODIR)
 
 clean : 

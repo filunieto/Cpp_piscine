@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/18 19:48:22 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:08:06 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Cat::~Cat()
 
 Cat & Cat::operator=(const Cat &rhs)
 {
-	std::cout << "assigment operator called Cat: " << this->type << std::endl;	
+	std::cout << "assigment operator called Cat: " << this->type << std::endl;
+	this->name = rhs.name;
 	return (*this);
 }
 

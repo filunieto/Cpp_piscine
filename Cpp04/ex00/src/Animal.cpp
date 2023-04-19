@@ -6,13 +6,13 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:08 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/18 19:35:07 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:46:12 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Animal.hpp"
 
-Animal::Animal() : type("Animal"), name("Default name animal")
+Animal::Animal() : type("Animal"), name("Animal default name")
 {
 	std::cout << "Constructor default Animal , No parameter name:  " << this->name << std::endl;
 }
@@ -42,13 +42,13 @@ Animal & Animal::operator=(const Animal &rhs)
 	return (*this);
 }
 		
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
-	std::cout  << this->name << " animal makes a sound :  " << std::endl;
+	std::cout  << this->name << " , animal makes a sound whatever  " << std::endl;
 
 }
 
-void	Animal::printClass()
+void	Animal::printClass() const
 {
 	std::cout  << " Print function animal :  " << std::endl;
 	std::cout  << this->type << " type    " << std::endl;

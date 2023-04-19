@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:13 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/18 19:53:22 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:08:28 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Dog::~Dog()
 
 Dog & Dog::operator=(const Dog &rhs)
 {
-	std::cout << "assigment operator called Dog: " << this->type << std::endl;	
+	std::cout << "assigment operator called Dog: " << this->type << std::endl;
+	this->name = rhs.name;
 	return (*this);
 }
 
