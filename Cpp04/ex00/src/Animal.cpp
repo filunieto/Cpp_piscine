@@ -6,13 +6,13 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:08 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/19 22:46:12 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/20 12:58:23 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Animal.hpp"
 
-Animal::Animal() : type("Animal"), name("Animal default name")
+Animal::Animal() : type("Animal_type"), name("Animal default name")
 {
 	std::cout << "Constructor default Animal , No parameter name:  " << this->name << std::endl;
 }

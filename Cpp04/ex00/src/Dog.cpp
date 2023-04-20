@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:13 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/19 22:08:28 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:01:05 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Dog::Dog(const Dog &copy) : Animal (copy)
 
 Dog::~Dog()
 {
-	std::cout << "Desstructor default Dog." << std::endl;	
+	std::cout << "Destructor default Dog." << std::endl;	
 
 }
 
@@ -45,5 +45,5 @@ Dog & Dog::operator=(const Dog &rhs)
 
 void Dog::makeSound() const
 {
-	std::cout << "meow meow meow!!!" << std::endl;
+	std::cout << "gua gua guau!!!" << std::endl;
 }
