@@ -6,15 +6,18 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/17 13:58:59 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/21 00:49:29 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/04/21 15:14:08 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
 NAME = Polymorphism
 
-SRC = 	main.cpp Animal.cpp Cat.cpp \
-		Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = 	main.cpp Animal.cpp Cat.cpp 			\
+		Dog.cpp WrongAnimal.cpp WrongCat.cpp 	\
+		Brain.cpp Idea.cpp						\
+
+
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
 

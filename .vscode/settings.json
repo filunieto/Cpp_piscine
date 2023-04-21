@@ -62,7 +62,14 @@
 		"ios": "cpp",
 		"locale": "cpp",
 		"mutex": "cpp",
-		"ratio": "cpp"
+		"ratio": "cpp",
+		"__hash_table": "cpp",
+		"__node_handle": "cpp",
+		"__split_buffer": "cpp",
+		"complex": "cpp",
+		"csignal": "cpp",
+		"iomanip": "cpp",
+		"stack": "cpp"
 	},
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#3399ff",

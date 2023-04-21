@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:58:56 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/21 00:50:03 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/21 00:55:11 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "include/Dog.hpp"
 #include "include/WrongAnimal.hpp"
 #include "include/WrongCat.hpp"
+#include "include/Brain.hpp"
+
 #include <stdlib.h>
 
 
