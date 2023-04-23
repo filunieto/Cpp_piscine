@@ -1,0 +1,6 @@
+en elk constructior de copia . CPP03, ex00
+podemos igualar solo el puntero con this , y con eso damos todas las propiedades?
+o hay que igualar propiedad a propiedad??
+
+En el operador asignacion:
+Lo mismo que arriba 
