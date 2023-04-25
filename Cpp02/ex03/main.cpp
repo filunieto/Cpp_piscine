@@ -5,34 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 02:58:51 by fnieves           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/02/20 11:33:43 by fnieves          ###   ########.fr       */
-=======
-/*   Updated: 2023/02/25 14:25:15 by fnieves          ###   ########.fr       */
->>>>>>> cpp02
+/*   Created: 2023/04/07 11:49:32 by fnieves           #+#    #+#             */
+/*   Updated: 2023/04/10 02:18:47 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "include/Headers.hpp"
 
-int main(void)
+int main()
 {
-	std::string name1 = "Flipi";
-	std::string name2 = "Wiki";
+	const Point a(0, 0);
+	const Point b(10, 0);
+	const Point c(0, 10);
+	const Point d(6, 6);
 
-	Zombie *Zombie1;
-	
-	Zombie1 = newZombie(name1);
-	Zombie1->announce();
-	delete Zombie1;
-	/*------------------------------------------------*/
+	std::cout << "Point x=" << p.getX() << " y=" << p.getY() << " is " << (bsp(a, b, c, p) ? "inside" : "outside") << std::endl;
 
-	randomChump(name2);
-	//new_Zombie->announce();
-<<<<<<< HEAD
 
-=======
->>>>>>> cpp02
+
 	return (0);
 }

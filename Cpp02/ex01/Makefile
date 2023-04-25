@@ -5,65 +5,49 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/20 02:42:24 by fnieves           #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2023/02/20 11:32:49 by fnieves          ###   ########.fr        #
-=======
-#    Updated: 2023/02/22 12:28:05 by fnieves          ###   ########.fr        #
->>>>>>> cpp02
+#    Created: 2023/04/07 11:34:28 by fnieves           #+#    #+#              #
+#    Updated: 2023/04/07 22:00:09 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+VPATH = src
+NAME = fixed
 
+SRC = main.cpp Fixed.cpp
+CC = c++
+CFLAGS = -Wextra -Wall -Werror -std=c++98
 
-# VPATH = src
+RM = rm -rfd
 
-NAME = zombie
-
-CXX = c++
-<<<<<<< HEAD
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-=======
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -O1
-
->>>>>>> cpp02
-
-SRC = 	main.cpp	\
-		Zombie.cpp	\
-		newZombie.cpp	\
-		randomChump.cpp	\
-
-# OBJ =  $(addprefix obj/, $(notdir$(SRC:%.cpp=%.o))) 
-OBJ = $(patsubst %.c, %.o, $(SRC))
+ODIR = obj
+OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
-
+	$(CC) $(CFLAGS) $(OBJ) -o $@
 
 obj/%.o : %.cpp | obj
-	$(CXX) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
-obj:
+obj :
 	mkdir obj
 
 clean :
-	rm -rfd obj
+	$(RM) obj/
 
 fclean : clean
-	rm $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean
+.PHONY : re clean fclean all
 
-r : re
-<<<<<<< HEAD
-	./zombie
-=======
+run : re
 	./$(NAME)
 
-val : re
-	valgrind --leak-check=yes -s ./$(NAME) 
->>>>>>> cpp02
+val:
+	valgrind --leak-check=full -s ./$(NAME)
+
+leaks:
+	leaks --atExit -- ./$(NAME)

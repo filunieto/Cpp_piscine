@@ -5,37 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:48:44 by fnieves-         ###   ########.fr       */
+/*   Created: 2023/04/07 11:49:32 by fnieves           #+#    #+#             */
+/*   Updated: 2023/04/10 22:57:47 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ClapTrap.hpp"
-
+#include "Fixed.hpp"
 
 int main()
 {
-	//Check the constructors
-	ClapTrap Jhon ("Jhon");
-	//one.printClass();
-	ClapTrap Willy ("Willy");
-	ClapTrap Joe("Joe");
-	Joe.printClass();
-	ClapTrap Jander (Joe);
-	Jander.printClass();
-	ClapTrap Manu ("Manu");
-	Willy = Manu;
-	Willy.printClass();
-
+	std::cout << "*****		Fixed a		 *********" << std::endl;
+	Fixed a;
+	std::cout << "*******		Fixed b( a )		******* " << std::endl;
+	Fixed b( a );
+	std::cout << "*******		Fixed c		******* " << std::endl;
+	Fixed c;
 	
+	std::cout << "*******		c = b		*******" 	 << std::endl;
+	c = b;
 	
-	//*****************
-	Willy.attack(Jander.getName());
-	Joe.takeDamage(4);
-	Jander.beRepaired(2);
-	std::cout << "After attacking "  << std::endl;
-	Joe.printClass();
-	Willy.printClass();
-	Jander.printClass();
-	return 0;
+	std::cout << "*******		a.getRawBits()		******* " << std::endl;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return (0);
 }

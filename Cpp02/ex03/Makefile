@@ -5,34 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/17 13:49:51 by fnieves-         ###   ########.fr        #
+#    Created: 2023/04/07 11:34:28 by fnieves           #+#    #+#              #
+#    Updated: 2023/04/14 15:00:49 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
-NAME = Claptrap
+NAME = fixedP
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp Fixed.cpp Point.cpp
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
 INCLUDE = -I include
+
 RM = rm -rfd
 
 ODIR = obj
-
-# $(notdir $(SRC:%.cpp=%.o)): this is the object
-#  file list without the directory names
 OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	 $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $@
 
 obj/%.o : %.cpp | obj
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-# el pipe dice que lo de la derecha tiene que existir para que se ejecute
 
 obj :
 	mkdir obj
@@ -43,15 +40,16 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
-
 re : fclean all
+
+.PHONY : re clean fclean all
 
 run : re
 	./$(NAME)
-	make fclean
 
 val:
 	valgrind --leak-check=full -s ./$(NAME)
 
 leaks:
 	leaks --atExit -- ./$(NAME)
+
