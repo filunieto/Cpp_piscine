@@ -3,39 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:48:44 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/16 21:19:02 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ClapTrap.hpp"
-
+#include "include/ScavTrap.hpp"
+#include "include/FragTrap.hpp"
 
 int main()
 {
 	//Check the constructors
-	ClapTrap Jhon ("Jhon");
-	//one.printClass();
-	ClapTrap Willy ("Willy");
-	ClapTrap Joe("Joe");
+	FragTrap Anonimo("Anonimo");
+	Anonimo.printClass();
+	FragTrap Joe("Joe");
 	Joe.printClass();
-	ClapTrap Jander (Joe);
+	FragTrap Jander (Joe);
 	Jander.printClass();
-	ClapTrap Manu ("Manu");
-	Willy = Manu;
-	Willy.printClass();
+	FragTrap Manu ("Manu");
+	Anonimo = Joe;
+	Anonimo.printClass();
 
 	
 	
 	//*****************
-	Willy.attack(Jander.getName());
+	Joe.attack(Jander.getName());
 	Joe.takeDamage(4);
-	Jander.beRepaired(2);
-	std::cout << "After attacking "  << std::endl;
 	Joe.printClass();
-	Willy.printClass();
-	Jander.printClass();
+	Joe.beRepaired(2);
+	std::cout << "\n*****After attacking**********"  << std::endl;
+	Joe.printClass();
+	Joe.highFivesGuys();
+	Joe.printClass();
 	return 0;
 }

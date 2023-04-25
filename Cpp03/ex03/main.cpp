@@ -3,39 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:37:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/17 13:48:44 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/04/16 23:37:53 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ClapTrap.hpp"
+#include "include/ScavTrap.hpp"
+#include "include/FragTrap.hpp"
+#include "include/DiamondTrap.hpp"
+
 
 
 int main()
 {
 	//Check the constructors
-	ClapTrap Jhon ("Jhon");
-	//one.printClass();
-	ClapTrap Willy ("Willy");
-	ClapTrap Joe("Joe");
+	DiamondTrap Naide;
+	Naide.printClass();
+	DiamondTrap Anonimo("Anonimo");
+	Anonimo.printClass();
+	DiamondTrap Joe("Joe");
 	Joe.printClass();
-	ClapTrap Jander (Joe);
+	DiamondTrap Jander (Joe);
 	Jander.printClass();
-	ClapTrap Manu ("Manu");
-	Willy = Manu;
-	Willy.printClass();
+	DiamondTrap Manu ("Manu");
+	std::cout << "\n*****  	Anonimo = Joe**********"  << std::endl;
+
+	Anonimo = Joe;
+	Anonimo.printClass();
+
+	std::cout << "\n*****  Test for functions;   **********"  << std::endl;
 
 	
-	
 	//*****************
-	Willy.attack(Jander.getName());
+	Joe.attack(Jander.getName());
 	Joe.takeDamage(4);
-	Jander.beRepaired(2);
-	std::cout << "After attacking "  << std::endl;
 	Joe.printClass();
-	Willy.printClass();
-	Jander.printClass();
+	Joe.beRepaired(2);
+	std::cout << "\n*****After attacking**********"  << std::endl;
+	Joe.printClass();
+	Joe.highFivesGuys();
+	Joe.whoAmI();
+	Joe.printClass();
 	return 0;
 }

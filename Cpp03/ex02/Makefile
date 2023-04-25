@@ -3,17 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/17 13:49:51 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/04/16 21:21:31 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
 NAME = Claptrap
 
-SRC = main.cpp ClapTrap.cpp
+SRC = 	main.cpp ClapTrap.cpp ScavTrap.cpp \
+		FragTrap.cpp
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
 INCLUDE = -I include
@@ -42,6 +43,7 @@ clean :
 
 fclean : clean
 	$(RM) $(NAME)
+	
 
 
 re : fclean all

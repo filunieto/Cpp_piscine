@@ -5,46 +5,46 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/14 14:35:45 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/17 13:49:51 by fnieves-         ###   ########.fr        #
+#    Created: 2023/04/17 13:58:59 by fnieves-          #+#    #+#              #
+#    Updated: 2023/04/21 15:14:08 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
-NAME = Claptrap
+NAME = Polymorphism
 
-SRC = main.cpp ClapTrap.cpp
+SRC = 	main.cpp Animal.cpp Cat.cpp 			\
+		Dog.cpp WrongAnimal.cpp WrongCat.cpp 	\
+		Brain.cpp Idea.cpp						\
+
+
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
-INCLUDE = -I include
+
 RM = rm -rfd
-
 ODIR = obj
-
-# $(notdir $(SRC:%.cpp=%.o)): this is the object
-#  file list without the directory names
 OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	 $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-obj/%.o : %.cpp | obj
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-# el pipe dice que lo de la derecha tiene que existir para que se ejecute
+$(ODIR)/%.o : %.cpp | $(ODIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-obj :
-	mkdir obj
+$(ODIR) :
+	mkdir $(ODIR)
 
-clean :
-	$(RM) obj/
+clean : 
+	$(RM) $(ODIR)/
 
 fclean : clean
 	$(RM) $(NAME)
 
-
 re : fclean all
+
+.PHONY : re clean fclean all
 
 run : re
 	./$(NAME)
