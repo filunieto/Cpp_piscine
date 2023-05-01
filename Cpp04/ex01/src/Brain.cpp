@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 00:54:35 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/25 13:23:04 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/30 14:30:12 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 
 Brain::Brain() : _BrainAnimal("Animal without brain")
 {
-	for (int i = 0; i < MAX_IDEA; i++)
-		_idea[i] = 0;
+	// for (int i = 0; i < MAX_IDEA; i++)
+	// 	_idea[i] = 0;
 	std::cout << "Constructor default Brain. No parameter." << std::endl;
 }
 
-Brain::Brain(const std::string & BrainAnimal) : _BrainAnimal(BrainAnimal)
-{
-	for (int i = 0; i < MAX_IDEA; i++)
-		_idea[i] = 0;
-	std::cout << "Constructor default Brain , inizialice to  " << this->_BrainAnimal << std::endl;
-}
+// Brain::Brain(const std::string & BrainAnimal) : _BrainAnimal(BrainAnimal)
+// {
+// 	// for (int i = 0; i < MAX_IDEA; i++)
+// 	// 	_idea[i] = 0;
+// 	std::cout << "Constructor default Brain , inizialice to  " << this->_BrainAnimal << std::endl;
+// }
 
 Brain::Brain(const Brain &copy)
 {

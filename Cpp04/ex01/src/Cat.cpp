@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/25 14:05:08 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/25 14:15:45 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,12 @@ void	Cat::printClass() const
 
 void	Cat::setIdea(unsigned int indexIdea, const unsigned int idea)
 {
-	//brain->_idea[indexIdea] = idea;
-	brain.set
+	_brain->setIdea(indexIdea, idea);
 }
 
+const unsigned int & Cat::getIdea(unsigned int indexIdea) const
+{
+	return (_brain->getIdea(indexIdea));
+}
 
-// 		const unsigned int & getIdea(unsigned int indexIdea) const;
 // 		Brain	*getBrain() const;

@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 00:54:32 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/25 13:22:53 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/04/30 14:30:20 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
 	unsigned int _idea[MAX_IDEA];
 public:
 	Brain();
-	Brain(const std::string & BrainAnimal);
+	//Brain(const std::string & BrainAnimal);
 	Brain(const Brain &copy);
 	~Brain();
 
