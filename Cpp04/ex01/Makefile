@@ -6,7 +6,7 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/17 13:58:59 by fnieves-          #+#    #+#              #
-#    Updated: 2023/04/21 15:14:08 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/05/02 12:44:41 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ VPATH = src
 NAME = Polymorphism
 
 SRC = 	main.cpp Animal.cpp Cat.cpp 			\
-		Dog.cpp WrongAnimal.cpp WrongCat.cpp 	\
-		Brain.cpp Idea.cpp						\
+		Dog.cpp 							 	\
+		Brain.cpp 								\
 
 
 CC = c++
@@ -49,6 +49,9 @@ re : fclean all
 run : re
 	./$(NAME)
 	make fclean
+
+test : re
+	./$(NAME)
 
 val:
 	valgrind --leak-check=full -s ./$(NAME)
