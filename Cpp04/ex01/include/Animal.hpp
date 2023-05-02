@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:02 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/21 15:13:03 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:40:48 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Animal
 	protected:
 		std::string	type;
 		std::string	name;
-		Brain	
 
 	public:
 		Animal();
@@ -31,8 +30,8 @@ class Animal
 		virtual ~Animal();
 		
 		Animal &operator=(const Animal &rhs);
-		void	printClass() const;
-		virtual void	makeSound() const;
+		virtual void	printClass() const;
+		virtual void	makeSound() const; //virtual will force the son's function to be called
 
 	private:
 		
