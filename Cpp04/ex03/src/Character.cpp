@@ -6,8 +6,11 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:49 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/02 20:53:26 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/03 00:28:41 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Character.hpp"
+
+#include <iostream>
+
