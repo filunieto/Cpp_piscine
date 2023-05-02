@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:58:56 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/02 12:44:37 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:15:05 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,52 +62,39 @@ int main()
 	}
 	for(i = 0;i < MAXANIMALS; i++)
 		animals[i]->makeSound();
-	for(i = 0;i < MAXANIMALS; i++)
-		animals[i]->printClass();
+	// for(i = 0;i < MAXANIMALS; i++)
+	// 	animals[i]->printClass();
 
 
-	std::cout << std::endl << "2). Example with Copy-dog" << std::endl;
-	Animal *dog = new Dog(*(Dog *)animals[0]);
-	std::cout << std::endl << "3). Example: dog and copy-dog have the SAME ideas:" << std::endl;
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(0) << std::endl;
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(1) << std::endl;
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(2) << std::endl;
+	std::cout << std::endl << "1). Example with Copy-dog" << std::endl;
+	//animals[0]->printClass();
+	//animals[2]->printClass(); //cat
+	std::cout << std::endl << "2). After print animals[0]->printClass() ." << std::endl;
+	Animal *cat1 = new Cat(*(Cat *)animals[2] );
+	Animal *dog1 = new Dog(*(Dog *)animals[0]); //el consytructor por copia la está liando
+	cat1->printClass();
+	std::cout << std::endl << "3). cat1->printClass(); ." << std::endl;
+	dog1->printClass();
+	std::cout << std::endl << "4). dog1->printClass();." << std::endl;
 
-	std::cout << std::endl << "4). Example: dog and copy-dog have the DIFFERENT ideas:" << std::endl;
-	((Dog *)dog)->setIdea(0, 1);
-	((Dog *)dog)->setIdea(1, 2);
-	((Dog *)dog)->setIdea(2, 3);
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(0) << std::endl;
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(1) << std::endl;
-	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(2) << std::endl;
+	std::cout << std::endl << "5). Example: dog and copy-dog have the SAME ideas:" << std::endl;
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(0) << std::endl;
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(1) << std::endl;
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(2) << std::endl;
 
-	std::cout << std::endl << "5). Delete Examples" << std::endl;
-	delete dog;
+	std::cout << std::endl << "6). Example: dog and copy-dog have the DIFFERENT ideas:" << std::endl;
+	((Dog *)dog1)->setIdea(0, 1);
+	((Dog *)dog1)->setIdea(1, 2);
+	((Dog *)dog1)->setIdea(2, 3);
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(0) << std::endl;
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(1) << std::endl;
+	std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog (dog1) idea: " << ((Dog *)dog1)->getIdea(2) << std::endl;
+
+	std::cout << std::endl << "7). Delete Examples" << std::endl;
+	delete dog1;
+	delete cat1;
 	while (--i >= 0)
 		delete (animals[i]);
+	check_leaks();
 	return 0;
 }
-
-
-	// std::cout << std::endl << "2). Example with Copy-dog" << std::endl;
-	// Animal *dog = new Dog(*(Dog *)animals[0]);
-
-	// std::cout << std::endl << "3). Example: dog and copy-dog have the SAME ideas:" << std::endl;
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(0) << std::endl;
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(1) << std::endl;
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(2) << std::endl;
-
-	// std::cout << std::endl << "4). Example: dog and copy-dog have the DIFFERENT ideas:" << std::endl;
-	// ((Dog *)dog)->setIdea(0, " [0] This a Copy-dog new idea! ");
-	// ((Dog *)dog)->setIdea(1, " [1] This a Copy-dog new idea! ");
-	// ((Dog *)dog)->setIdea(2, " [2] This a Copy-dog new idea! ");
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(0) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(0) << std::endl;
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(1) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(1) << std::endl;
-	// std::cout << " Dog idea: " << ((Dog *)animals[0])->getIdea(2) << "		Copy-dog idea: " << ((Dog *)dog)->getIdea(2) << std::endl;
-
-	// std::cout << std::endl << "5). Delete Examples" << std::endl;
-	// delete dog;
-	// i = MAXANIMALS;
-	// while (i-- > 0)
-	// 	delete animals[i];
-	

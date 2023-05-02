@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 22:11:13 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/02 12:45:03 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:11:12 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Dog::Dog(const std::string &name)  : Animal(name), _brain(new Brain())
 	std::cout << "Constructor default Dog , with parameter name." << std::endl;	
 }
 
-Dog::Dog(const Dog &copy) : Animal (copy)
+Dog::Dog(const Dog &copy) : Animal (copy), _brain(new Brain(*copy._brain))
 {
 	std::cout << "Constructor copy Dog: " << this->type << std::endl;	
 }
