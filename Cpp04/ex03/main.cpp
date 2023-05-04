@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:55 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/04 19:04:12 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:15:34 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 int main()
 {
 	IMateriaSource *src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	src->learnMateria(new  Ice());
+	src->learnMateria(new  Cure());
 
 	ICharacter *me = new Character("me");
 	AMateria *tmp;

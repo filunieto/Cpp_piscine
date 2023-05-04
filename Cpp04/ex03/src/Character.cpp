@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:49 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/04 16:37:02 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:24:03 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ Character::~Character()
 	while (++i < 4)
 	{
 		if (inventory[i])
+		{	
 			delete inventory[i];
+		}
 	}
 	std::cout << "Destructor default Character" << std::endl;
 }

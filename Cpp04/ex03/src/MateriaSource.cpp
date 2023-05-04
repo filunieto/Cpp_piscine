@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:52 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/04 20:03:30 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:16:45 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 
 
-MateriaSource::MateriaSource(): _name("Default name MateriaSource"), materias()
+MateriaSource::MateriaSource(): _name(), materias()
 {
 	std::cout << "Constructor default MateriaSource" << std::endl;
 }
