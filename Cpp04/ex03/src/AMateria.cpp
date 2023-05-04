@@ -6,13 +6,13 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:46 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/04 14:59:35 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:09:47 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/AMateria.hpp"
 
-AMateria::AMateria(): _type("Default type AMateria")
+AMateria::AMateria(): _type()
 {
 	std::cout << "Constructor default AMateria" << std::endl;
 }
@@ -27,9 +27,8 @@ AMateria::AMateria(const std::string  &type): _type(type)
 	std::cout << "Constructor name AMateria, with name " << this->_type << std::endl;
 }
 
-AMateria::AMateria(const AMateria &copy)
+AMateria::AMateria(const AMateria &copy) : _type(copy.getType())
 {
-	_type = copy._type;
 	std::cout << "Constructor copy AMateria" << std::endl;
 }
 

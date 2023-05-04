@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:39 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/03 17:26:28 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:10:26 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define AMATERIA_HPP
 
 #include <iostream>
+#include <string>
 #include "ICharacter.hpp"
 
 

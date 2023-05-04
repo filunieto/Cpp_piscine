@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:49 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/04 15:29:58 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:37:02 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,8 @@ void Character::use(int idx, ICharacter& target)
 	std::cout << "function Character::use." << std::endl;
 	if (idx >= 0 && idx <= 3)
 	{
+		//calls the: void use(ICharacter& target) function
+		//AMateria *inventory[4];
 		inventory[idx]->use(target);
 	}
 }
