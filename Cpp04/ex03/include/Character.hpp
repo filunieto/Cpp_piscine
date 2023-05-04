@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:49:41 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/03 20:21:30 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 15:07:56 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ public:
 	Character(const Character &copy);
 	~Character();
 
+	Character & operator=(Character const &rhs);
 	std::string const & getName() const;
+
 	void equip(AMateria* m);
 	void unequip(int idx);
-	void use(int idx, ICharacter& target);
+	void use(int idx, ICharacter& target); //implmentar
 	
-	Character & operator=(Character const &rhs);
 };
 
 
