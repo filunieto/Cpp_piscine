@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:58:56 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/04/21 00:50:03 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/04 21:37:04 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,17 +76,8 @@ int main ()
 	delete dog5;
 
 
-	// {
-	// 	const Animal* meta = new Animal();
-	// 	const Animal* j = new Dog();
-	// 	const Animal* i = new Cat();
-	// 	std::cout << j->getType() << " " << std::endl;
-	// 	std::cout << i->getType() << " " << std::endl;
-	// 	i->makeSound(); //will output the cat sound!
-	// 	j->makeSound();
-	// 	meta->makeSound();
-	// }
-	//atexit(check_leaks);
+
+	atexit(check_leaks);
 	return 0;
 }
 
