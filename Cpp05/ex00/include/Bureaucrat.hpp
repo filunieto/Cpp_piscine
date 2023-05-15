@@ -6,12 +6,15 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:04 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/11 22:42:51 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:44:24 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUROCRAT_HPP
 #define BUROCRAT_HPP
+
+#define MAX_GRADE 1
+#define MIN_GRADE 150
 
 #include <iostream>
 
@@ -20,13 +23,15 @@ class Bureaucrat
 	private:
 		const std::string _name;
 		int _grade;
+		void gradeChecker() const;
 		
 	public:
 		Bureaucrat ();
-		~Bureaucrat (const std::string &name, int grade);
+		~Bureaucrat ();
+		Bureaucrat (const std::string &name, int grade);
 		Bureaucrat (const  Bureaucrat &copy);
 
-		Bureaucrat & operator=(const  Bureaucrat &rhs);
+		Bureaucrat & operator=(const Bureaucrat &copy);
 		const std::string & getName() const;
 		const int getGrade() const;
 		void incrementGrade();
