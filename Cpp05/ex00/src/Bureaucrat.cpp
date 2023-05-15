@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/15 14:53:02 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:14:55 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,24 @@ Another way:
 Another way:
 	Using the getters in the cases before
 */
-Bureaucrat::Bureaucrat (const  Bureaucrat &copy): _name(copy._name), _grade(copy._name)
+Bureaucrat::Bureaucrat (const  Bureaucrat &copy): _name(copy._name), _grade(copy._grade)
 {
 	std::cout << " Constructor copy Bureaucrat called " << std::endl;
 	gradeChecker();
 }
 
+/*
+Error: 
+*/
 Bureaucrat & Bureaucrat::operator=(const  Bureaucrat &copy)
 {
 	std::cout << " operator= Bureaucrat called " << std::endl;
-	if (this == &copy)
-		return *this
-	_name = copy._name;
-	_grade = copy._grade;
+	if (this != &copy)
+	{
+		
+		// _name.setName(copy.getName()); //We can not assign the name as it is const
+		_grade = copy._grade;
+	}
 	return *this;
 }
 
@@ -61,7 +66,12 @@ const std::string & Bureaucrat::getName() const
 	return (_name);
 }
 
-const int Bureaucrat::getGrade() const
+// void Bureaucrat::setName(const std::string &name)
+// {
+// 	this->_name = name;
+// }
+
+int Bureaucrat::getGrade() const
 {
 	return (_grade);
 }
@@ -80,7 +90,7 @@ void Bureaucrat::decrementGrade()
 	_grade++;
 }
 
-std::ostream & Bureaucrat::operator<<(std::ostream &o, const Bureaucrat &rhs)
+std::ostream & operator<<(std::ostream &o, const Bureaucrat &rhs)
 {
 	o << "From Bureaucrat::operator<<. " << rhs.getName() << ", bureaucrat grade: " << rhs.getGrade();
 	return o;
@@ -94,33 +104,33 @@ void Bureaucrat::gradeChecker() const
 		throw GradeMinimumException();
 }
 
-GradeMaximumException::GradeMaximumException()
+Bureaucrat::GradeMaximumException::GradeMaximumException()
 {
 	std::cout << " Constructor default GradeMaximumException called " << std::endl;
 }
 
-GradeMaximumException::~GradeMaximumException() throw()
+Bureaucrat::GradeMaximumException::~GradeMaximumException() throw()
 {
 	std::cout << " Destructor default GradeMaximumException called " << std::endl;
 }
 
-virtual const char* Bureaucrat::GradeMaximumException::what() const throw();
+const char* Bureaucrat::GradeMaximumException::what() const throw()
 {
-	return (" GradeMaximumException::what() >> grade too high ")
+	return (" GradeMaximumException::what() >> grade too high ");
 }
 
 
-GradeMinimumException::GradeMinimumException()
+Bureaucrat::GradeMinimumException::GradeMinimumException()
 {
 	std::cout << " Constructor default GradeMinimumException called " << std::endl;
 }
 
-GradeMinimumException::~GradeMinimumException() throw()
+Bureaucrat::GradeMinimumException::~GradeMinimumException() throw()
 {
 	std::cout << " Destructor default GradeMinimumException called " << std::endl;
 }
 
-virtual const char* Bureaucrat::GradeMinimumException::what() const throw();
+const char* Bureaucrat::GradeMinimumException::what() const throw()
 {
-	return (" GradeMinimumException::what() >> grade too low ")
+	return (" GradeMinimumException::what() >> grade too low ");
 }
