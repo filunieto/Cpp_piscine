@@ -6,7 +6,11 @@
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/20 02:42:24 by fnieves           #+#    #+#              #
+<<<<<<< HEAD
+#    Updated: 2023/02/20 11:32:49 by fnieves          ###   ########.fr        #
+=======
 #    Updated: 2023/02/22 12:28:05 by fnieves          ###   ########.fr        #
+>>>>>>> cpp02
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +21,12 @@
 NAME = zombie
 
 CXX = c++
+<<<<<<< HEAD
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+=======
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -O1
 
+>>>>>>> cpp02
 
 SRC = 	main.cpp	\
 		Zombie.cpp	\
@@ -51,7 +59,11 @@ re : fclean all
 .PHONY : all clean fclean
 
 r : re
+<<<<<<< HEAD
+	./zombie
+=======
 	./$(NAME)
 
 val : re
 	valgrind --leak-check=yes -s ./$(NAME) 
+>>>>>>> cpp02

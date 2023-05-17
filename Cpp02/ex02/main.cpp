@@ -6,7 +6,11 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 11:49:32 by fnieves           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/04/11 19:36:45 by fnieves-         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/11 19:01:46 by fnieves-         ###   ########.fr       */
+>>>>>>> f6d7fd2373675fcedb3ec1ba92c30ff153faa462
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +34,7 @@ int main()
 	std::cout << "\n Fixed::max( a, b ) \n";
 	std::cout  << Fixed::max( a, b ) << std::endl;
 
+<<<<<<< HEAD
 	{
 		std::cout << "\nSome other tests: Comparison operators\n\n";
 		Fixed a(42);
@@ -85,5 +90,7 @@ int main()
 		 std::cout << "-----------------------" << std::endl;
 	}
 
+=======
+>>>>>>> f6d7fd2373675fcedb3ec1ba92c30ff153faa462
 	return (0);
 }
