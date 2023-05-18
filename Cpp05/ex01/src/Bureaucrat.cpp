@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/15 16:14:55 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/18 12:48:56 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,31 +106,36 @@ void Bureaucrat::gradeChecker() const
 
 Bureaucrat::GradeMaximumException::GradeMaximumException()
 {
-	std::cout << " Constructor default GradeMaximumException called " << std::endl;
+	std::cout << " Constructor default Bureaucrat::GradeMaximumException called " << std::endl;
 }
 
 Bureaucrat::GradeMaximumException::~GradeMaximumException() throw()
 {
-	std::cout << " Destructor default GradeMaximumException called " << std::endl;
+	std::cout << " Destructor default Bureaucrat::GradeMaximumException called " << std::endl;
 }
 
 const char* Bureaucrat::GradeMaximumException::what() const throw()
 {
-	return (" GradeMaximumException::what() >> grade too high ");
+	return (" Bureaucrat::GradeMaximumException::what() >> grade too high ");
 }
 
 
 Bureaucrat::GradeMinimumException::GradeMinimumException()
 {
-	std::cout << " Constructor default GradeMinimumException called " << std::endl;
+	std::cout << " Constructor default Bureaucrat::GradeMinimumException called " << std::endl;
 }
 
 Bureaucrat::GradeMinimumException::~GradeMinimumException() throw()
 {
-	std::cout << " Destructor default GradeMinimumException called " << std::endl;
+	std::cout << " Destructor default Bureaucrat::GradeMinimumException called " << std::endl;
 }
 
 const char* Bureaucrat::GradeMinimumException::what() const throw()
 {
-	return (" GradeMinimumException::what() >> grade too low ");
+	return (" Bureaucrat::GradeMinimumException::what() >> grade too low ");
+}
+
+void Bureaucrat::signForm(Form &form) const
+{
+	form.beSigned(*this);
 }
