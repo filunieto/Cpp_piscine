@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 00:36:48 by fnieves           #+#    #+#             */
-/*   Updated: 2023/05/18 13:19:40 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/05/23 21:00:00 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Form
 		Form(const  Form &copy);
 		~Form();
 		Form & operator=(const  Form &copy);
-
 		const std::string & getName() const;
 		const char * isSigned() const;
 		int getGradeSignature() const;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/18 12:48:56 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/05/23 13:57:40 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ Bureaucrat & Bureaucrat::operator=(const  Bureaucrat &copy)
 	std::cout << " operator= Bureaucrat called " << std::endl;
 	if (this != &copy)
 	{
-		
 		// _name.setName(copy.getName()); //We can not assign the name as it is const
 		_grade = copy._grade;
 	}

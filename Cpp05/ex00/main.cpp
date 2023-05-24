@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:13 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/17 01:11:11 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/05/23 13:27:22 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
 		Bureaucrat Bureaucrat_Juan(Bureaucrat_JuanOrigen);
 		std::cout << "Bureaucrat_Juan: " << Bureaucrat_Juan << std::endl;
 	}
-	
+
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
