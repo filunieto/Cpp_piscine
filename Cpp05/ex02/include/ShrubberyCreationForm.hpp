@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:43 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 00:58:16 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:23:48 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,6 @@ public:
 	void execute(const Bureaucrat &executor) const;
 };
 
-ShrubberyCreationForm::ShrubberyCreationForm(/* args */)
-{
-}
-
-ShrubberyCreationForm::~ShrubberyCreationForm()
-{
-}
 
 
 #endif

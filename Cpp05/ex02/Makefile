@@ -6,15 +6,16 @@
 #    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/23 21:18:14 by fnieves-          #+#    #+#              #
-#    Updated: 2023/05/24 21:36:58 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/05/25 21:04:05 by fnieves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH = src
 NAME = Bureaucrat
 
-SRC = 	main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp \
-		PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+SRC = 	main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp 	\
+		PresidentialPardonForm.cpp RobotomyRequestForm.cpp 	\
+		AForm.cpp
 
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
@@ -47,9 +48,3 @@ re : fclean all
 run : re
 	./$(NAME)
 	make fclean
-
-val:
-	valgrind --leak-check=full -s ./$(NAME)
-
-leaks:
-	leaks --atExit -- ./$(NAME)

@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/24 23:48:48 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/25 20:27:34 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ const char* Bureaucrat::GradeMinimumException::what() const throw()
 	return (" Bureaucrat::GradeMinimumException::what() >> grade too low ");
 }
 
-void Bureaucrat::signForm(Form &form) const
+void Bureaucrat::signForm(AForm &form) const
 {
 	form.beSigned(*this);
 }

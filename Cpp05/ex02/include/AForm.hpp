@@ -6,7 +6,7 @@
 /*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:33 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 00:55:42 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/05/25 22:42:52 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class AForm
 		bool _signed;
 		const int _gradeSignature;
 		const int _gradeExecution;
+	protected:
 		void gradeChecker() const;
 	public:
 		AForm();
@@ -38,6 +39,7 @@ class AForm
 		const std::string & getName() const;
 		const char * isSigned() const;
 		int getGradeSignature() const;
+		bool getSigned() const;
 		int getGradeExecution() const;
 		void beSigned(const Bureaucrat &Bur);
 		virtual void Executed(const Bureaucrat &executor) const = 0;
@@ -54,6 +56,16 @@ class AForm
 			GradeMinimumException();
 			~GradeMinimumException() throw ();
 			virtual const char* what() const throw();
+	};
+	class UnsignedFormException: public std::exception
+	{
+		public:
+			// UnsignedFormException();
+			// ~UnsignedFormException() throw ();
+			virtual const char* what() const throw()
+			{
+				return ("Form not signed");
+			}
 	};
 };
 

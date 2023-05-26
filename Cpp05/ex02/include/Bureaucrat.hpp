@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
+/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:04 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/18 13:00:40 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/05/25 20:37:22 by fnieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #define MAX_GRADE 1
 #define MIN_GRADE 150
 
-#include "Form.hpp" 
+#include "AForm.hpp" 
 #include <iostream>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -40,7 +40,7 @@ class Bureaucrat
 		//void setName(const std::string &name);
 		void incrementGrade();
 		void decrementGrade();
-		void signForm(Form &form) const;
+		void signForm(AForm &form) const;
 	class GradeMaximumException :public std::exception
 	{
 		public:
