@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:33 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 22:42:52 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/06/05 09:31:55 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "Bureaucrat.hpp" 
+#include "Bureaucrat.hpp"
+#include <cstdlib>
 
 class Bureaucrat;
 

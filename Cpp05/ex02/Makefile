@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+         #
+#    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/23 21:18:14 by fnieves-          #+#    #+#              #
-#    Updated: 2023/05/25 21:04:05 by fnieves-         ###   ########.fr        #
+#    Updated: 2023/06/06 19:46:44 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ODIR = obj
 OBJ = $(addprefix $(ODIR)/,$(notdir $(SRC:%.cpp=%.o)))
 
 all : $(NAME)
-
+  
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
@@ -46,5 +46,9 @@ re : fclean all
 .PHONY : re clean fclean all
 
 run : re
+	./$(NAME)
+
+
+check : re
 	./$(NAME)
 	make fclean
