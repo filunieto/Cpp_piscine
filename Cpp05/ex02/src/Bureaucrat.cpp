@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 20:27:34 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/06/14 12:35:19 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name), _grade(
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << " Destructor default Bureaucrat called " << std::endl;
+	std::cout << " Destructor default Bureaucrat called for " << _name << std::endl;
 }
 
 /*

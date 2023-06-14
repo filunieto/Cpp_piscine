@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:08:11 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/15 16:14:55 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:51:56 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ const std::string & Bureaucrat::getName() const
 	return (_name);
 }
 
-// void Bureaucrat::setName(const std::string &name)
+// void Bureaucrat::setName(const std::string &name) >>>es una constante y solo se uede inicializar al ppio
 // {
 // 	this->_name = name;
 // }
@@ -114,7 +114,7 @@ Bureaucrat::GradeMaximumException::~GradeMaximumException() throw()
 	std::cout << " Destructor default GradeMaximumException called " << std::endl;
 }
 
-const char* Bureaucrat::GradeMaximumException::what() const throw()
+const char* Bureaucrat::GradeMaximumException::what() const throw() //que significa esa 
 {
 	return (" GradeMaximumException::what() >> grade too high ");
 }

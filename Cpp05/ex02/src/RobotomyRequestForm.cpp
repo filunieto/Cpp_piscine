@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:28 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 20:40:27 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/06/14 13:26:34 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,16 @@ const std::string RobotomyRequestForm::getTarget() const
 	return (_target);
 }
 
-void RobotomyRequestForm::execute(const Bureaucrat &executor) const
+// 
+void RobotomyRequestForm::Executed(const Bureaucrat &executor) const
 {
 	if (executor.getGrade() > this->getGradeExecution())
 		throw AForm::GradeMinimumException();
 	if (!this->getSigned())
 		throw AForm::UnsignedFormException();
-	std::cout << this->getName() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << "drilling, drilling, drilling, ... #$%&((^$!@@#$& and more drilling ..." << std::endl;
+	if (std::rand() % 2)
+		std::cout << _target << "has been robotomized successfull!" << std::endl;
+	else
+		std::cout << _target << "failed to be robotomized !" << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fnieves- <fnieves-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:38 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/05/25 21:00:19 by fnieves-         ###   ########.fr       */
+/*   Updated: 2023/06/14 12:25:41 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	void setTarget(const std::string &target);
 	const std::string getTarget() const;
 
-	void execute(const Bureaucrat &executor) const;
+	void Executed(const Bureaucrat &executor) const;
 };
 
 #endif
