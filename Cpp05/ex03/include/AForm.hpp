@@ -6,7 +6,7 @@
 /*   By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:18:33 by fnieves-          #+#    #+#             */
-/*   Updated: 2023/06/14 10:01:30 by fnieves          ###   ########.fr       */
+/*   Updated: 2023/06/15 12:40:56 by fnieves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 	AForm();
 	AForm(const std::string &name, int gradeExecution, int gradeSignature);
 	AForm(const AForm &copy);
-	~AForm();
+	virtual ~AForm();
 	AForm &operator=(const AForm &copy);
 	const std::string &getName() const;
 	const char *isSigned() const;

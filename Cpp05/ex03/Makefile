@@ -6,7 +6,7 @@
 #    By: fnieves <fnieves@42heilbronn.de>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/23 21:18:14 by fnieves-          #+#    #+#              #
-#    Updated: 2023/06/14 13:49:20 by fnieves          ###   ########.fr        #
+#    Updated: 2023/06/15 13:11:56 by fnieves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Bureaucrat
 
 SRC = 	main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp 	\
 		PresidentialPardonForm.cpp RobotomyRequestForm.cpp 	\
-		AForm.cpp
+		AForm.cpp Intern.cpp
 
 CC = c++
 CFLAGS = -Wextra -Wall -Werror -std=c++98
@@ -39,7 +39,8 @@ clean :
 	$(RM) $(ODIR)/
 
 fclean : clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) ./Bender_shrubbery
+	
 
 re : fclean all
 
@@ -52,4 +53,6 @@ run : re
 check : re
 	./$(NAME)
 	make fclean
-	rm ./default_ShrubberyCreationForm_shrubbery
+
+val: run
+	valgrind --leak-check=full -s ./$(NAME)
